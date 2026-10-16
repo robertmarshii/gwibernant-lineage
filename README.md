@@ -1,35 +1,31 @@
 # Gwibernant / Robb — Working Springer Lineage Explorer
 
-[**Open the live family-tree website**](https://robertmarshii.github.io/gwibernant-lineage/)
+**Interactive site:** https://robertmarshii.github.io/gwibernant-lineage/
 
-Interactive pedigree research on working English Springer Spaniels, linking the original Gwibernant/Robb family with later UK, Irish, European, American and Canadian field-trial winners.
+A source-linked pedigree investigation of English Springer Spaniel working and field-trial families, with particular attention to the earlier **Gwibernant / Robb** and **Badgercourt** ancestry, later British breeding, and North American working descendants.
 
-## Features
+## Research snapshot — October 2026
 
-- **212 named dogs**, **10 breeding/litter records**, **238 parent/ancestry links** (snapshot of October 2026 research).
-- **27 featured competition achievers**, covering historical and recent champions.
-- **1985–2026 winners archive**, with 48 sourced result records. Its Canadian National Open sequence is complete from **1985–2020** within the published winners list; UK, Ireland and Italian entries are selected, not exhaustive. There is no assertion that a missing year had no winner.
-- Filter championship results by year/decade, region and dog name. Where ancestry has been mapped, select the winner to jump to that dog's family tree.
-- Zoom, pan, search and highlight pedigrees, and export a KR-audit CSV.
-- **KR confirmed** indicates a documented ancestry path to FTCh Kenine Robb of Rytex. **Not cleared** means the currently reconstructed pedigree is incomplete; it is **not** a declaration of KR-free ancestry.
+- **305 named dogs** mapped, with **10 mating/litter records** and **358 genealogy links**.
+- **143 dogs** have both parents recorded in the reconstructed dataset.
+- **63 dogs/entries** show a traceable ancestry route back to **FTCh Kenine Robb of Rytex (KR)**. The interface displays the route for confirmed cases.
+- Everyone else is **NOT CLEARED**, **not certified KR-free**. Pedigree databases can omit distant ancestry.
+- Historical winners archive covers **1985–2026** (selected international sources, not an exhaustive worldwide league table).
 
-## Results are not directly comparable
+### Existing family reconstructions expanded
 
-A British FTCh title, a Canadian National Open victory, a US amateur season points award, and a lifetime number of first-place ribbons are different measures. These highlights are **not a ranked world leaderboard**. Individual win totals and pedigree connections appear only where the available sources support them.
+1. **Robbson of Gwibernant → Badgercourt**: added intermediate ancestors, older matings, Skipper of Arford and branches from Druid, Colleen and related working kennels.
+2. **Chilview Ann / Angel**: filled two-parent pedigrees into Steadroc Acker, Moorlough descendants, Sundart Solar, Silver Bullitt, Hearthrock’s Mayhem and Gaspereaumtn Minnie BB.
+3. **Bricksclose Matchwood (frozen semen)**: added Matchwood × Rancho Mistletoe Sugar Moon offspring and later **Coldwater’s Field of Dreams (2020)**.
+4. **Crossing of Canadian lines**: Chilview Angel → Sundart Solar → **Nels' Jigsaw’s Viper**, bred to **Blackriver's Tanner** to produce **Nels' Tip of the Sword**, then followed forward through later trial pedigrees. **Tanner himself is not shown as a Solar descendant.**
+5. **Sussexoak / Moorlough**: added more parents, offspring and source links and preserved proven KR exclusion paths through Clarburgh Amy and other documented KR descendants.
 
-The archive includes repeat championship winners **Pel Tan Roly** (Canada 1992 and 1994), **Dawsonlee Faithful** (Canada 2014 and 2016), and **Rytex Racine** (Irish/British 1990–91). The earlier **Cortman Lane, Sunnybrae Siskin, Drury and Kettlestang** lines are also connected to known ancestors and offspring.
+## Using the tree
 
-## Source quality
+Search a dog by name, pan and zoom, select ancestors or descendants, or click a dog to inspect recorded relatives, the source link and the **KR ancestry path** when known. Also view the historical winners archive and the source notes.
 
-Each highlighted champion and archive record includes a source link. Principal sources include [Canadian National Spaniel Field Trial Association](https://cnsfta.com/eudore-chevrier-trophy/), [English Springer Spaniel Field Trials](https://essft.com/), and relevant English Springer pedigree registers.
-
-This is an **investigative working map**, not a certified Royal Kennel Club / AKC / CKC pedigree. Some archival sources disagree on championship-year labels; they are labelled accordingly. Do not use the map to claim that a mating is KR-free without a full documented pedigree of **both** parents.
+**Important:** A documented paternal or maternal path is not a full genetic audit. Red / KR-present means KR is in the recorded ancestry; absence of red means incomplete knowledge, not freedom from that ancestor. Verify **both parents’ full documented pedigrees** before selecting a mating.
 
 ## Publishing
 
-The repository's root `index.html` is a self-contained static site. In **Settings → Pages** choose **Deploy from a branch**, branch `main`, directory `/(root)` if Pages is not already configured. GitHub Pages builds after commits on `main`.
-
-## Files
-
-- `index.html` — website, all mapped research, interactive controls and winner archive.
-- `README.md` — overview and limitations.
+The root `index.html` is a complete self-contained website with no external asset or build dependency. GitHub Pages should be configured as **Deploy from a branch → main → /(root)**. Updates to `main` automatically initiate a redeploy.
