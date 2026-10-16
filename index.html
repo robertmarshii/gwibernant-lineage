@@ -1,0 +1,1268 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gwibernant / Robb — Working Springer Lineage Explorer</title><meta name="description" content="Interactive pedigree research on Gwibernant working English Springer Spaniels, North American descendants, and the Kenine Robb of Rytex exclusion."><style>
+:root{color-scheme:dark;--bg:#090f1b;--surface:#111c2b;--surface2:#17253a;--border:#26394f;--text:#eaf1fb;--muted:#9bafc6;--accent:#73c3e8;--red:#ff99a5;--gold:#eac784;--green:#7ce3ca}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:14px/1.48 system-ui,-apple-system,Segoe UI,sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:#83cfef}a:hover{text-decoration:none}header{padding:22px 27px 18px;border-bottom:1px solid var(--border);background:linear-gradient(90deg,#14263b,#0b1320)}h1{font-size:clamp(21px,2.5vw,31px);letter-spacing:-.5px;margin:0 0 4px}h2{font-size:17px;margin:0 0 11px}p{margin:0}header .subtitle{color:var(--muted);max-width:980px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:10px;font-weight:800;color:var(--accent);margin-bottom:7px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;min-height:calc(100vh - 120px)}.main{min-width:0;display:flex;flex-direction:column}.toolbar{padding:12px 17px;display:flex;gap:9px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--border)}.search{min-width:150px;flex:1;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:9px;padding:10px 12px;outline:none}.search:focus{border-color:var(--accent)}.btn{background:#18283d;color:var(--text);border:1px solid #30445c;padding:9px 11px;border-radius:9px}.btn:hover,.btn.on{border-color:var(--accent);background:#1a4054}.btn.flat{background:transparent}.toolbar-group{display:flex;gap:5px}.legend{display:flex;gap:15px;flex-wrap:wrap;align-items:center;padding:11px 18px;font-size:12px;color:#c4d3e5;border-bottom:1px solid var(--border)}.key{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:5px;vertical-align:-1px}.graph{height:clamp(460px,76vh,1000px);width:100%;overflow:hidden;background-color:#0a1422;background-image:radial-gradient(#1d3546 0.75px,transparent .75px);background-size:20px 20px;position:relative;touch-action:none;cursor:grab}.graph.dragging{cursor:grabbing}.graph svg{display:block;width:100%;height:100%;touch-action:none;user-select:none}.graph g.node{cursor:pointer;transition:opacity .16s,filter .16s}.graph g.node:hover{filter:drop-shadow(0 0 5px #7bd9ff)}.graph g.node.selected polygon,.graph g.node.selected path{stroke:#fff!important;stroke-width:2.5px!important}.graph g.node.dim,.graph g.edge.dim{opacity:.12}.graph g.edge{transition:opacity .2s;pointer-events:none}.hint{position:absolute;bottom:12px;left:14px;color:#9cb6ca;background:#102337d6;border:1px solid #31475a;padding:7px 10px;border-radius:8px;font-size:12px;pointer-events:none}.side{background:#111c2b;border-left:1px solid var(--border);padding:18px;display:flex;flex-direction:column;gap:14px}.side-card{border:1px solid var(--border);padding:17px;border-radius:13px;background:#15253a}.side-card small{color:var(--muted)}.title-row{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}.status{font-size:11px;font-weight:800;padding:4px 7px;border-radius:6px;white-space:nowrap}.status.kr{color:var(--red);background:#51283b}.status.lead{color:var(--green);background:#194843}.status.review{color:var(--gold);background:#4b3b24}.status.historic,.status.foundation{color:#adcef2;background:#234264}.side-card p{color:#c2d0e1;margin:8px 0 0}.info-links{display:flex;flex-direction:column;gap:6px;margin-top:12px}.info-links a{font-size:12px}.bigstat{font-weight:780;font-size:21px;color:var(--accent)}.summary{display:grid;grid-template-columns:1fr 1fr;gap:10px}.summary div{border-radius:10px;border:1px solid var(--border);padding:10px;background:#122238}.summary small{display:block;font-size:11px;color:var(--muted)}.sidebar-intro{color:var(--muted)}.audit{border-left:3px solid #eac784;padding:8px 10px;background:#322b20;border-radius:3px;font-size:12px;color:#e7d8b5}.foot{font-size:11px;color:#8eabc5;border-top:1px solid var(--border);padding:14px 17px}.toplinks{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.toplinks a{font-size:12px;text-decoration:none;background:#1b3547;border:1px solid #37536d;color:#bfebfe;border-radius:7px;padding:6px 9px}.count{font-size:12px;color:var(--muted)}@media(max-width:900px){.layout{grid-template-columns:1fr}.side{border-left:0;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr}.graph{height:570px}}@media(max-width:570px){.side{display:flex}.graph{height:490px}.toolbar{padding:10px}.toolbar-group{width:100%}.toolbar-group .btn{flex:1}.legend{gap:9px;font-size:11px}header{padding:18px}.hint{font-size:10px}}
+</style></head><body>
+<header><div class="eyebrow">WORKING ENGLISH SPRINGER SPANIELS · PEDIGREE RESEARCH</div><h1>The Gwibernant / Robb Lineage Explorer</h1><p class="subtitle">Interactive research map of the old Robbson, Druid, Glynvilla, Chilview and North American branches. Click any dog to inspect relationships and supporting records.</p><div class="toplinks"><a href="#diagram">Explore the tree ↓</a><a href="https://englishspringerspaniel.pedigreedatabaseonline.com/en/Gwibernant-Robbs-Boy/pedigree/26814/i" target="_blank" rel="noopener">Original Robbs Boy record ↗</a></div></header>
+<div class="layout" id="diagram"><main class="main"><div class="toolbar"><input id="search" class="search" placeholder="Search dogs, e.g. Druid, Minnie, KR…" aria-label="Search dogs"><div class="toolbar-group"><button class="btn" id="zoomIn" title="Zoom in">＋</button><button class="btn" id="zoomOut" title="Zoom out">－</button><button class="btn" id="fit">Fit all</button><button class="btn" id="center">Centre selection</button></div></div><div class="toolbar"><div class="toolbar-group"><button data-mode="all" class="btn on">All lines</button><button data-mode="hidekr" class="btn">Dim KR</button><button data-mode="parents" class="btn">Ancestors</button><button data-mode="children" class="btn">Descendants</button></div><span class="count" id="visibleCount"></span></div><div class="legend"><span><i class="key" style="background:#7ce3ca"></i>Modern lead (not KR-cleared)</span><span><i class="key" style="background:#ecc886"></i>Needs audit</span><span><i class="key" style="background:#ff9aa5"></i>Confirmed KR descendant</span><span><i class="key" style="background:#8dc0fa"></i>Early lineage</span><span>⋯ Dotted = ancestry / unconfirmed direct link</span></div><div id="stage" class="graph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.42.4 (0)
+ -->
+<!-- Title: Springer Pages: 1 -->
+<svg id="treeSvg" aria-label="Interactive pedigree relationship diagram"
+ viewBox="0.00 0.00 3120.80 1266.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(50.4 1216.4)">
+<title>Springer</title>
+<!-- ashley&#45;&gt;robbson -->
+<g id="edge1" class="edge">
+<title>ashley&#45;&gt;robbson</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M192.34,-1009.48C209.36,-1006.89 227.09,-1004.19 244.12,-1001.6"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="244.6,-1003.15 248.91,-1000.87 244.12,-999.97 244.6,-1003.15"/>
+</g>
+<!-- macdonna&#45;&gt;robbson -->
+<g id="edge2" class="edge">
+<title>macdonna&#45;&gt;robbson</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M185.07,-963.41C204.23,-966.33 224.59,-969.43 244.04,-972.39"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="244.17,-974.04 248.96,-973.14 244.65,-970.85 244.17,-974.04"/>
+</g>
+<!-- robbson&#45;&gt;robbboy -->
+<g id="edge3" class="edge">
+<title>robbson&#45;&gt;robbboy</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M422.75,-1013.03C435.88,-1017.32 449.33,-1021.76 462,-1026 473.87,-1029.98 486.41,-1034.24 498.68,-1038.44"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="498.31,-1040.01 503.19,-1039.98 499.36,-1036.97 498.31,-1040.01"/>
+</g>
+<!-- robbson&#45;&gt;sam -->
+<g id="edge5" class="edge">
+<title>robbson&#45;&gt;sam</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M370.37,-1013.01C399,-1038.32 445.25,-1076.7 490,-1103 495.24,-1106.08 500.78,-1109.03 506.43,-1111.84"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="505.93,-1113.39 510.77,-1113.95 507.34,-1110.49 505.93,-1113.39"/>
+</g>
+<!-- robbson&#45;&gt;susan -->
+<g id="edge9" class="edge">
+<title>robbson&#45;&gt;susan</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M365.21,-960.76C383.84,-939.5 410.5,-908.66 433,-881 459.2,-848.79 457.23,-832.49 490,-807 494.41,-803.57 499.18,-800.38 504.14,-797.44"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="505.16,-798.71 508.35,-795.02 503.55,-795.92 505.16,-798.71"/>
+</g>
+<!-- robbson&#45;&gt;blackrod -->
+<g id="edge17" class="edge">
+<title>robbson&#45;&gt;blackrod</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M412,-960.95C429.61,-952.25 447.58,-941.3 462,-928 479.87,-911.51 471.65,-896.96 490,-881 493.47,-877.98 497.22,-875.18 501.15,-872.59"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="502.12,-873.89 505.14,-870.07 500.39,-871.17 502.12,-873.89"/>
+</g>
+<!-- phantom&#45;&gt;robbboy -->
+<g id="edge4" class="edge">
+<title>phantom&#45;&gt;robbboy</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M417.65,-1091.14C441.63,-1087.38 468.32,-1083.2 492.92,-1079.34"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="493.19,-1080.93 497.49,-1078.62 492.7,-1077.74 493.19,-1080.93"/>
+</g>
+<!-- phantom&#45;&gt;sam -->
+<g id="edge6" class="edge">
+<title>phantom&#45;&gt;sam</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M417.65,-1114.86C443.16,-1118.86 471.71,-1123.34 497.58,-1127.39"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="497.58,-1129.02 502.38,-1128.14 498.08,-1125.84 497.58,-1129.02"/>
+</g>
+<!-- robbboy&#45;&gt;bouncer -->
+<g id="edge7" class="edge">
+<title>robbboy&#45;&gt;bouncer</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M660.75,-1045.77C686.06,-1039.43 713.99,-1032.43 739.26,-1026.1"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="739.88,-1027.61 743.95,-1024.93 739.1,-1024.48 739.88,-1027.61"/>
+</g>
+<!-- lywoodsmut&#45;&gt;bouncer -->
+<g id="edge8" class="edge">
+<title>lywoodsmut&#45;&gt;bouncer</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M655.78,-996.43C682.34,-997.98 712.24,-999.73 739.16,-1001.3"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="739.12,-1002.91 743.8,-1001.58 739.3,-999.7 739.12,-1002.91"/>
+</g>
+<!-- crowhill&#45;&gt;susan -->
+<g id="edge10" class="edge">
+<title>crowhill&#45;&gt;susan</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M421.24,-769C441.66,-769 463.82,-769 484.87,-769"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="485.02,-770.61 489.62,-769 485.02,-767.39 485.02,-770.61"/>
+</g>
+<!-- susan&#45;&gt;druid -->
+<g id="edge11" class="edge">
+<title>susan&#45;&gt;druid</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M668.02,-768.64C754.86,-768.28 886.96,-767.73 974.49,-767.37"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="974.55,-768.98 979.14,-767.35 974.54,-765.76 974.55,-768.98"/>
+</g>
+<!-- susan&#45;&gt;dusty -->
+<g id="edge35" class="edge">
+<title>susan&#45;&gt;dusty</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M614.83,-742.97C658.99,-709.96 734.91,-653.22 780.83,-618.9"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="781.91,-620.1 784.63,-616.06 779.98,-617.52 781.91,-620.1"/>
+</g>
+<!-- don&#45;&gt;druid -->
+<g id="edge12" class="edge">
+<title>don&#45;&gt;druid</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M897.05,-727.03C921.58,-732.89 949.04,-739.44 974.51,-745.52"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="974.39,-747.15 979.24,-746.65 975.14,-744.02 974.39,-747.15"/>
+</g>
+<!-- druid&#45;&gt;skipper -->
+<g id="edge13" class="edge">
+<title>druid&#45;&gt;skipper</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1144.86,-793.09C1149.61,-796.32 1154.06,-799.95 1158,-804 1208.6,-856.02 1164.03,-905.35 1215,-957 1219.01,-961.06 1223.49,-964.69 1228.29,-967.95"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1227.64,-969.45 1232.38,-970.59 1229.39,-966.74 1227.64,-969.45"/>
+</g>
+<!-- druid&#45;&gt;cortman -->
+<g id="edge15" class="edge">
+<title>druid&#45;&gt;cortman</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1143.47,-740.97C1148.67,-737.7 1153.59,-734.06 1158,-730 1199.39,-691.91 1173.17,-654.61 1215,-617 1220.49,-612.07 1226.7,-607.77 1233.26,-604.02"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1234.13,-605.39 1237.39,-601.77 1232.59,-602.56 1234.13,-605.39"/>
+</g>
+<!-- druid&#45;&gt;matchwood -->
+<g id="edge28" class="edge">
+<title>druid&#45;&gt;matchwood</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1151.68,-767C1170.41,-767 1190.44,-767 1209.79,-767"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1210.1,-768.61 1214.7,-767 1210.1,-765.39 1210.1,-768.61"/>
+</g>
+<!-- castlings&#45;&gt;skipper -->
+<g id="edge14" class="edge">
+<title>castlings&#45;&gt;skipper</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1144.83,-995C1171.22,-995 1200.79,-995 1227.69,-995"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1227.73,-996.61 1232.33,-995 1227.73,-993.39 1227.73,-996.61"/>
+</g>
+<!-- skipper&#45;&gt;griffin -->
+<g id="edge25" class="edge">
+<title>skipper&#45;&gt;griffin</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1395.74,-970.89C1422.56,-962.89 1452.41,-953.97 1479.2,-945.97"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1479.87,-947.45 1483.82,-944.6 1478.95,-944.37 1479.87,-947.45"/>
+</g>
+<!-- bomakama&#45;&gt;cortman -->
+<g id="edge16" class="edge">
+<title>bomakama&#45;&gt;cortman</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1142.13,-607.03C1170.75,-602.51 1203.41,-597.34 1232.46,-592.74"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1232.79,-594.32 1237.09,-592.01 1232.29,-591.14 1232.79,-594.32"/>
+</g>
+<!-- cortman&#45;&gt;dans -->
+<g id="edge51" class="edge">
+<title>cortman&#45;&gt;dans</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1390.57,-556.46C1398.48,-552.56 1406.13,-548.09 1413,-543 1446.35,-518.28 1437.03,-494.23 1470,-469 1473.99,-465.95 1478.26,-463.11 1482.7,-460.46"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1483.64,-461.78 1486.82,-458.1 1482.03,-458.99 1483.64,-461.78"/>
+</g>
+<!-- singrett&#45;&gt;blackrod -->
+<g id="edge18" class="edge">
+<title>singrett&#45;&gt;blackrod</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M417.65,-844C439.8,-844 464.25,-844 487.24,-844"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="487.52,-845.61 492.12,-844 487.52,-842.39 487.52,-845.61"/>
+</g>
+<!-- blackrod&#45;&gt;dandelion -->
+<g id="edge19" class="edge">
+<title>blackrod&#45;&gt;dandelion</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M664.44,-870.09C685.81,-876.69 708.84,-883.81 730.43,-890.48"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="730.15,-892.08 735.02,-891.9 731.1,-889 730.15,-892.08"/>
+</g>
+<!-- emmalene&#45;&gt;dandelion -->
+<g id="edge20" class="edge">
+<title>emmalene&#45;&gt;dandelion</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M655.78,-918C676.16,-918 698.52,-918 719.99,-918"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="720.24,-919.61 724.84,-918 720.24,-916.39 720.24,-919.61"/>
+</g>
+<!-- dandelion&#45;&gt;mayfly -->
+<g id="edge21" class="edge">
+<title>dandelion&#45;&gt;mayfly</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M916.15,-918C938.66,-918 962.48,-918 984.28,-918"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="984.3,-919.61 988.9,-918 984.3,-916.39 984.3,-919.61"/>
+</g>
+<!-- tuff&#45;&gt;mayfly -->
+<g id="edge22" class="edge">
+<title>tuff&#45;&gt;mayfly</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M897.05,-867.01C924.83,-875.47 956.35,-885.07 984.5,-893.64"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="984.12,-895.21 988.99,-895.01 985.06,-892.13 984.12,-895.21"/>
+</g>
+<!-- mayfly&#45;&gt;minstral -->
+<g id="edge23" class="edge">
+<title>mayfly&#45;&gt;minstral</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1142.13,-918C1166.11,-918 1192.94,-918 1218.1,-918"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1218.17,-919.61 1222.77,-918 1218.17,-916.39 1218.17,-919.61"/>
+</g>
+<!-- harrier&#45;&gt;minstral -->
+<g id="edge24" class="edge">
+<title>harrier&#45;&gt;minstral</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1142.81,-864.84C1166.63,-872.28 1193.21,-880.58 1218.15,-888.37"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1217.92,-889.98 1222.79,-889.82 1218.88,-886.91 1217.92,-889.98"/>
+</g>
+<!-- minstral&#45;&gt;griffin -->
+<g id="edge26" class="edge">
+<title>minstral&#45;&gt;griffin</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1405,-919.47C1429.25,-919.87 1455.33,-920.3 1479.03,-920.68"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1479.11,-922.29 1483.74,-920.76 1479.16,-919.08 1479.11,-922.29"/>
+</g>
+<!-- griffin&#45;&gt;kaiser -->
+<g id="edge27" class="edge">
+<title>griffin&#45;&gt;kaiser</title>
+<path fill="none" stroke="#dab878" stroke-width="1.4" stroke-dasharray="5,2" d="M1637.01,-922C1693.59,-922 1771.08,-922 1829.96,-922"/>
+<polygon fill="#dab878" stroke="#dab878" stroke-width="1.4" points="1830.28,-923.61 1834.88,-922 1830.28,-920.39 1830.28,-923.61"/>
+<text text-anchor="middle" x="1736.5" y="-924.8" font-family="Times,serif" font-size="9.00" fill="#b7a581">older ancestry / to check</text>
+</g>
+<!-- griffin&#45;&gt;syncerus -->
+<g id="edge78" class="edge">
+<title>griffin&#45;&gt;syncerus</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1637.27,-906.23C1750.99,-882.57 1965.06,-838.02 2083.28,-813.42"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2083.61,-815 2087.79,-812.48 2082.96,-811.84 2083.61,-815"/>
+</g>
+<!-- scilla&#45;&gt;matchwood -->
+<g id="edge29" class="edge">
+<title>scilla&#45;&gt;matchwood</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1148.58,-717.64C1172.05,-724.69 1197.77,-732.41 1221.75,-739.61"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1221.34,-741.16 1226.21,-740.94 1222.26,-738.08 1221.34,-741.16"/>
+</g>
+<!-- matchwood&#45;&gt;calendar -->
+<g id="edge30" class="edge">
+<title>matchwood&#45;&gt;calendar</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1393.71,-793.07C1420.1,-801.82 1449.61,-811.59 1476.33,-820.45"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1476.07,-822.06 1480.94,-821.97 1477.08,-819 1476.07,-822.06"/>
+</g>
+<!-- matchwood&#45;&gt;dallas -->
+<g id="edge32" class="edge">
+<title>matchwood&#45;&gt;dallas</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1413.04,-769.81C1431.01,-770.32 1449.71,-770.86 1467.5,-771.37"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1467.85,-772.99 1472.49,-771.51 1467.94,-769.77 1467.85,-772.99"/>
+</g>
+<!-- matchwood&#45;&gt;briar -->
+<g id="edge33" class="edge">
+<title>matchwood&#45;&gt;briar</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1413.07,-745.88C1431.89,-742.43 1451.5,-739.26 1470,-737 1684.41,-710.84 1938.18,-703.66 2072.53,-701.71"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2072.68,-703.32 2077.26,-701.64 2072.64,-700.1 2072.68,-703.32"/>
+</g>
+<!-- sugarmoon&#45;&gt;calendar -->
+<g id="edge31" class="edge">
+<title>sugarmoon&#45;&gt;calendar</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1411.28,-843.76C1428.87,-844.26 1447.21,-844.79 1464.76,-845.29"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1465.04,-846.91 1469.68,-845.43 1465.13,-843.69 1465.04,-846.91"/>
+</g>
+<!-- thistle&#45;&gt;briar -->
+<g id="edge34" class="edge">
+<title>thistle&#45;&gt;briar</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2008.28,-671.1C2029.14,-675.03 2051.36,-679.22 2072.38,-683.18"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2072.3,-684.8 2077.12,-684.07 2072.9,-681.64 2072.3,-684.8"/>
+</g>
+<!-- rytexrex&#45;&gt;dusty -->
+<g id="edge36" class="edge">
+<title>rytexrex&#45;&gt;dusty</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M655.78,-590C678.91,-590 704.57,-590 728.59,-590"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="728.77,-591.61 733.37,-590 728.77,-588.39 728.77,-591.61"/>
+</g>
+<!-- dusty&#45;&gt;gryphon -->
+<g id="edge37" class="edge">
+<title>dusty&#45;&gt;gryphon</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M866.56,-563.89C896.34,-547.07 936.47,-525.2 973,-508 979.55,-504.92 986.42,-501.84 993.34,-498.86"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="994.06,-500.31 997.66,-497.02 992.79,-497.35 994.06,-500.31"/>
+</g>
+<!-- masterpiece&#45;&gt;gryphon -->
+<g id="edge38" class="edge">
+<title>masterpiece&#45;&gt;gryphon</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M914.76,-471C932.13,-471 950.32,-471 967.79,-471"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="968.1,-472.61 972.7,-471 968.1,-469.39 968.1,-472.61"/>
+</g>
+<!-- gryphon&#45;&gt;kr -->
+<g id="edge39" class="edge">
+<title>gryphon&#45;&gt;kr</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1158.29,-484.03C1176.08,-486.56 1194.81,-489.22 1212.85,-491.78"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1212.65,-493.38 1217.43,-492.43 1213.1,-490.19 1212.65,-493.38"/>
+</g>
+<!-- bramble&#45;&gt;kr -->
+<g id="edge40" class="edge">
+<title>bramble&#45;&gt;kr</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1154.1,-531.14C1172.98,-528.15 1193.08,-524.97 1212.41,-521.91"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1213.02,-523.45 1217.31,-521.14 1212.52,-520.27 1213.02,-523.45"/>
+</g>
+<!-- kr&#45;&gt;art -->
+<g id="edge41" class="edge">
+<title>kr&#45;&gt;art</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1401.2,-532.09C1425.41,-539.42 1451.68,-547.37 1475.74,-554.65"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1475.33,-556.21 1480.2,-556 1476.27,-553.13 1475.33,-556.21"/>
+</g>
+<!-- kr&#45;&gt;amy -->
+<g id="edge43" class="edge">
+<title>kr&#45;&gt;amy</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1395.58,-532.11C1401.7,-535.37 1407.59,-538.99 1413,-543 1446.35,-567.72 1437.03,-591.77 1470,-617 1473.99,-620.05 1478.26,-622.89 1482.7,-625.54"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1482.03,-627.01 1486.82,-627.9 1483.64,-624.22 1482.03,-627.01"/>
+</g>
+<!-- kr&#45;&gt;millshadow -->
+<g id="edge45" class="edge">
+<title>kr&#45;&gt;millshadow</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1346.81,-479.89C1377.17,-455.8 1424.86,-420.06 1470,-395 1475.61,-391.88 1481.54,-388.87 1487.57,-386.01"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1488.28,-387.46 1491.76,-384.05 1486.91,-384.54 1488.28,-387.46"/>
+</g>
+<!-- kr&#45;&gt;gyso -->
+<g id="edge73" class="edge">
+<title>kr&#45;&gt;gyso</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1410.58,-506C1429.47,-506 1449.26,-506 1468.01,-506"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1468.15,-507.61 1472.75,-506 1468.15,-504.39 1468.15,-507.61"/>
+</g>
+<!-- siskin&#45;&gt;art -->
+<g id="edge42" class="edge">
+<title>siskin&#45;&gt;art</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1397.78,-628.95C1422.82,-621.37 1450.33,-613.04 1475.46,-605.44"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1476.18,-606.9 1480.12,-604.03 1475.25,-603.82 1476.18,-606.9"/>
+</g>
+<!-- siskin&#45;&gt;amy -->
+<g id="edge44" class="edge">
+<title>siskin&#45;&gt;amy</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1397.78,-654C1422.82,-654 1450.33,-654 1475.46,-654"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1475.52,-655.61 1480.12,-654 1475.52,-652.39 1475.52,-655.61"/>
+</g>
+<!-- art&#45;&gt;thistle -->
+<g id="edge48" class="edge">
+<title>art&#45;&gt;thistle</title>
+<path fill="none" stroke="#dab878" stroke-width="1.4" stroke-dasharray="5,2" d="M1640.5,-596.51C1693.62,-607.62 1763.93,-622.32 1820.16,-634.07"/>
+<polygon fill="#dab878" stroke="#dab878" stroke-width="1.4" points="1820.04,-635.69 1824.87,-635.06 1820.7,-632.54 1820.04,-635.69"/>
+<text text-anchor="middle" x="1736.5" y="-630.8" font-family="Times,serif" font-size="9.00" fill="#b7a581">older ancestry / to check</text>
+</g>
+<!-- art&#45;&gt;ringo -->
+<g id="edge46" class="edge">
+<title>art&#45;&gt;ringo</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1640.5,-580C1697.29,-580 1773.72,-580 1831.6,-580"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1831.83,-581.61 1836.43,-580 1831.83,-578.39 1831.83,-581.61"/>
+</g>
+<!-- art&#45;&gt;sker -->
+<g id="edge64" class="edge">
+<title>art&#45;&gt;sker</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1640.57,-567.51C1692.13,-559.68 1760.94,-549.81 1822,-543 1910.8,-533.1 2012.82,-525.25 2082.76,-520.42"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2083.26,-522 2087.74,-520.07 2083.04,-518.78 2083.26,-522"/>
+</g>
+<!-- amy&#45;&gt;retes -->
+<g id="edge77" class="edge">
+<title>amy&#45;&gt;retes</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1633.99,-680.01C1693.55,-701.37 1777.7,-731.56 1838.47,-753.36"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1837.93,-754.88 1842.8,-754.92 1839.02,-751.85 1837.93,-754.88"/>
+</g>
+<!-- ringo&#45;&gt;blue -->
+<g id="edge47" class="edge">
+<title>ringo&#45;&gt;blue</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1996.79,-582.86C2024.3,-583.85 2055.24,-584.97 2083.11,-585.97"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2083.27,-587.59 2087.92,-586.15 2083.38,-584.37 2083.27,-587.59"/>
+</g>
+<!-- finglen&#45;&gt;jenoren -->
+<g id="edge49" class="edge">
+<title>finglen&#45;&gt;jenoren</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1390.69,-288.55C1418.66,-284.31 1450.46,-279.5 1478.86,-275.2"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1479.44,-276.74 1483.75,-274.46 1478.96,-273.56 1479.44,-276.74"/>
+</g>
+<!-- parkmaple&#45;&gt;jenoren -->
+<g id="edge50" class="edge">
+<title>parkmaple&#45;&gt;jenoren</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1390.69,-237.45C1418.66,-241.69 1450.46,-246.5 1478.86,-250.8"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1478.96,-252.44 1483.75,-251.54 1479.44,-249.26 1478.96,-252.44"/>
+</g>
+<!-- jenoren&#45;&gt;ann -->
+<g id="edge53" class="edge">
+<title>jenoren&#45;&gt;ann</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1602.12,-289.15C1663.8,-328.65 1778.51,-401.25 1822,-423 1828.15,-426.08 1834.63,-429.08 1841.18,-431.97"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1840.86,-433.59 1845.72,-433.95 1842.15,-430.63 1840.86,-433.59"/>
+</g>
+<!-- jenoren&#45;&gt;angel -->
+<g id="edge55" class="edge">
+<title>jenoren&#45;&gt;angel</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1637.01,-257.67C1695.29,-253.55 1775.75,-247.87 1835.2,-243.67"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1835.33,-245.28 1839.8,-243.35 1835.1,-242.06 1835.33,-245.28"/>
+</g>
+<!-- dimple&#45;&gt;dans -->
+<g id="edge52" class="edge">
+<title>dimple&#45;&gt;dans</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1390.69,-400.24C1417.6,-405.3 1448.05,-411.03 1475.61,-416.22"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1475.55,-417.84 1480.37,-417.11 1476.14,-414.68 1475.55,-417.84"/>
+</g>
+<!-- dans&#45;&gt;ann -->
+<g id="edge54" class="edge">
+<title>dans&#45;&gt;ann</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1640.5,-438.25C1692.73,-442.38 1761.58,-447.83 1817.32,-452.23"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1817.28,-453.85 1821.99,-452.6 1817.53,-450.64 1817.28,-453.85"/>
+</g>
+<!-- dans&#45;&gt;angel -->
+<g id="edge56" class="edge">
+<title>dans&#45;&gt;angel</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1629.21,-405.89C1636.67,-402.46 1644.07,-398.8 1651,-395 1732.39,-350.33 1740.27,-319.05 1822,-275 1827.74,-271.9 1833.8,-268.92 1839.96,-266.09"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1840.72,-267.52 1844.24,-264.15 1839.39,-264.58 1840.72,-267.52"/>
+</g>
+<!-- ann&#45;&gt;acker -->
+<g id="edge57" class="edge">
+<title>ann&#45;&gt;acker</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2011.11,-451.75C2035.87,-449.56 2062.38,-447.22 2086.39,-445.11"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2086.71,-446.7 2091.15,-444.69 2086.43,-443.49 2086.71,-446.7"/>
+</g>
+<!-- ann&#45;&gt;sker -->
+<g id="edge63" class="edge">
+<title>ann&#45;&gt;sker</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2011.11,-480.64C2034.84,-485.87 2060.16,-491.45 2083.36,-496.56"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2083.13,-498.16 2087.97,-497.58 2083.82,-495.02 2083.13,-498.16"/>
+</g>
+<!-- angel&#45;&gt;solar -->
+<g id="edge65" class="edge">
+<title>angel&#45;&gt;solar</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1993.04,-225.28C2015.09,-221.57 2039.58,-217.45 2063.06,-213.5"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2063.48,-215.06 2067.75,-212.71 2062.94,-211.88 2063.48,-215.06"/>
+</g>
+<!-- kelmscott&#45;&gt;acker -->
+<g id="edge58" class="edge">
+<title>kelmscott&#45;&gt;acker</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1993.04,-401.74C2022.58,-407.9 2056.51,-414.97 2086.51,-421.22"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2086.46,-422.86 2091.29,-422.22 2087.12,-419.71 2086.46,-422.86"/>
+</g>
+<!-- acker&#45;&gt;ashlen -->
+<g id="edge59" class="edge">
+<title>acker&#45;&gt;ashlen</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2244.64,-415.73C2277.7,-405.99 2316.51,-394.57 2350.09,-384.68"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2350.62,-386.2 2354.58,-383.35 2349.71,-383.11 2350.62,-386.2"/>
+</g>
+<!-- sara&#45;&gt;ashlen -->
+<g id="edge60" class="edge">
+<title>sara&#45;&gt;ashlen</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2244.64,-361C2277.56,-361 2316.19,-361 2349.68,-361"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2349.98,-362.61 2354.58,-361 2349.98,-359.39 2349.98,-362.61"/>
+</g>
+<!-- ashlen&#45;&gt;salander -->
+<g id="edge61" class="edge">
+<title>ashlen&#45;&gt;salander</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2508.22,-349.8C2538.84,-345.28 2574.31,-340.03 2605.7,-335.39"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2605.99,-336.98 2610.31,-334.71 2605.52,-333.79 2605.99,-336.98"/>
+</g>
+<!-- knots&#45;&gt;salander -->
+<g id="edge62" class="edge">
+<title>knots&#45;&gt;salander</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2538.14,-301.21C2560.63,-304.45 2584.09,-307.82 2605.63,-310.93"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2605.42,-312.52 2610.2,-311.58 2605.88,-309.33 2605.42,-312.52"/>
+</g>
+<!-- superscud&#45;&gt;solar -->
+<g id="edge66" class="edge">
+<title>superscud&#45;&gt;solar</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2001.27,-172.75C2021.15,-175.54 2042.58,-178.55 2063.23,-181.44"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2063.12,-183.05 2067.9,-182.1 2063.57,-179.86 2063.12,-183.05"/>
+</g>
+<!-- solar&#45;&gt;bullitt -->
+<g id="edge67" class="edge">
+<title>solar&#45;&gt;bullitt</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2268.23,-177.78C2287.28,-174.29 2307.28,-170.62 2326.47,-167.1"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2327.1,-168.62 2331.33,-166.2 2326.52,-165.45 2327.1,-168.62"/>
+</g>
+<!-- lilsis&#45;&gt;bullitt -->
+<g id="edge68" class="edge">
+<title>lilsis&#45;&gt;bullitt</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2244.64,-129.52C2270.16,-132.06 2299.11,-134.94 2326.44,-137.65"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2326.43,-139.27 2331.17,-138.12 2326.75,-136.07 2326.43,-139.27"/>
+</g>
+<!-- bullitt&#45;&gt;mayhem -->
+<g id="edge69" class="edge">
+<title>bullitt&#45;&gt;mayhem</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2531.86,-129.44C2550.87,-125.89 2570.78,-122.17 2589.81,-118.62"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2590.4,-120.15 2594.62,-117.72 2589.8,-116.98 2590.4,-120.15"/>
+</g>
+<!-- makers&#45;&gt;mayhem -->
+<g id="edge70" class="edge">
+<title>makers&#45;&gt;mayhem</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2532.6,-84.13C2551.44,-86.03 2571.14,-88.03 2589.96,-89.93"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2589.99,-91.55 2594.72,-90.41 2590.31,-88.35 2589.99,-91.55"/>
+</g>
+<!-- mayhem&#45;&gt;minnie -->
+<g id="edge71" class="edge">
+<title>mayhem&#45;&gt;minnie</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2786.3,-76.2C2803.34,-71.92 2821.07,-67.47 2838.04,-63.21"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2838.74,-64.7 2842.8,-62.02 2837.95,-61.57 2838.74,-64.7"/>
+</g>
+<!-- fred&#45;&gt;minnie -->
+<g id="edge72" class="edge">
+<title>fred&#45;&gt;minnie</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2784.59,-31.45C2802.08,-32.48 2820.37,-33.55 2837.84,-34.57"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2838.06,-36.2 2842.75,-34.86 2838.25,-32.98 2838.06,-36.2"/>
+</g>
+<!-- gyso&#45;&gt;beggar -->
+<g id="edge74" class="edge">
+<title>gyso&#45;&gt;beggar</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1629.21,-479.89C1636.67,-476.46 1644.07,-472.8 1651,-469 1732.39,-424.33 1740.27,-393.05 1822,-349 1827.74,-345.9 1833.8,-342.92 1839.96,-340.09"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="1840.72,-341.52 1844.24,-338.15 1839.39,-338.58 1840.72,-341.52"/>
+</g>
+<!-- beggar&#45;&gt;everlasting -->
+<g id="edge75" class="edge">
+<title>beggar&#45;&gt;everlasting</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1996.79,-303.1C2025.5,-299.88 2057.94,-296.24 2086.73,-293.01"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2086.93,-294.61 2091.32,-292.49 2086.57,-291.41 2086.93,-294.61"/>
+</g>
+<!-- everlasting&#45;&gt;knots -->
+<g id="edge76" class="edge">
+<title>everlasting&#45;&gt;knots</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2244.64,-284.58C2268.21,-284.76 2294.71,-284.96 2320.15,-285.16"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2320.27,-286.77 2324.89,-285.19 2320.3,-283.55 2320.27,-286.77"/>
+</g>
+<!-- retes&#45;&gt;syncerus -->
+<g id="edge79" class="edge">
+<title>retes&#45;&gt;syncerus</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M1996.79,-785.77C2024.3,-787.42 2055.24,-789.28 2083.11,-790.96"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2083.23,-792.58 2087.92,-791.25 2083.43,-789.36 2083.23,-792.58"/>
+</g>
+<!-- syncerus&#45;&gt;sussex -->
+<g id="edge80" class="edge">
+<title>syncerus&#45;&gt;sussex</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2248.17,-796C2274.88,-796 2305.02,-796 2332.99,-796"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2333.22,-797.61 2337.82,-796 2333.22,-794.39 2333.22,-797.61"/>
+</g>
+<!-- sussex&#45;&gt;domino -->
+<g id="edge81" class="edge">
+<title>sussex&#45;&gt;domino</title>
+<path fill="none" stroke="#65819e" stroke-width="1.1" d="M2525.28,-796C2551.54,-796 2579.96,-796 2605.66,-796"/>
+<polygon fill="#65819e" stroke="#65819e" stroke-width="1.1" points="2605.83,-797.61 2610.43,-796 2605.83,-794.39 2605.83,-797.61"/>
+</g>
+<!-- ashley -->
+<g id="node1" class="node">
+<title>ashley</title>
+<g id="a_node1"><a xlink:title="FTCh Gwibernant Ashley Robb">
+<path fill="#153b65" stroke="#9bc8fb" stroke-width="1.2" d="M180,-1050C180,-1050 12,-1050 12,-1050 6,-1050 0,-1044 0,-1038 0,-1038 0,-1010 0,-1010 0,-1004 6,-998 12,-998 12,-998 180,-998 180,-998 186,-998 192,-1004 192,-1010 192,-1010 192,-1038 192,-1038 192,-1044 186,-1050 180,-1050"/>
+<text text-anchor="middle" x="96" y="-1027.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh Gwibernant Ashley Robb</text>
+<text text-anchor="middle" x="96" y="-1014.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">✦ FOUNDATION</text>
+</a>
+</g>
+</g>
+<!-- macdonna -->
+<g id="node2" class="node">
+<title>macdonna</title>
+<g id="a_node2"><a xlink:title="Macsiccar Auchertyre Donna">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M173,-976C173,-976 19,-976 19,-976 13,-976 7,-970 7,-964 7,-964 7,-936 7,-936 7,-930 13,-924 19,-924 19,-924 173,-924 173,-924 179,-924 185,-930 185,-936 185,-936 185,-964 185,-964 185,-970 179,-976 173,-976"/>
+<text text-anchor="middle" x="96" y="-946.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">Macsiccar Auchertyre Donna</text>
+</a>
+</g>
+</g>
+<!-- robbson -->
+<g id="node3" class="node">
+<title>robbson</title>
+<g id="a_node3"><a xlink:title="FTCh Robbson of Gwibernant">
+<path fill="#153b65" stroke="#9bc8fb" stroke-width="1.2" d="M421,-1013C421,-1013 261,-1013 261,-1013 255,-1013 249,-1007 249,-1001 249,-1001 249,-973 249,-973 249,-967 255,-961 261,-961 261,-961 421,-961 421,-961 427,-961 433,-967 433,-973 433,-973 433,-1001 433,-1001 433,-1007 427,-1013 421,-1013"/>
+<text text-anchor="middle" x="341" y="-990.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh Robbson of Gwibernant</text>
+<text text-anchor="middle" x="341" y="-977.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">✦ FOUNDATION</text>
+</a>
+</g>
+</g>
+<!-- phantom -->
+<g id="node4" class="node">
+<title>phantom</title>
+<g id="a_node4"><a xlink:title="Gwibernant Phantom">
+<path fill="#153b65" stroke="#9bc8fb" stroke-width="1.2" d="M405.5,-1129C405.5,-1129 276.5,-1129 276.5,-1129 270.5,-1129 264.5,-1123 264.5,-1117 264.5,-1117 264.5,-1089 264.5,-1089 264.5,-1083 270.5,-1077 276.5,-1077 276.5,-1077 405.5,-1077 405.5,-1077 411.5,-1077 417.5,-1083 417.5,-1089 417.5,-1089 417.5,-1117 417.5,-1117 417.5,-1123 411.5,-1129 405.5,-1129"/>
+<text text-anchor="middle" x="341" y="-1106.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Gwibernant Phantom</text>
+<text text-anchor="middle" x="341" y="-1092.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">✦ FOUNDATION</text>
+</a>
+</g>
+</g>
+<!-- robbboy -->
+<g id="node5" class="node">
+<title>robbboy</title>
+<g id="a_node5"><a xlink:title="Gwibernant Robbs Boy">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M648.5,-1092C648.5,-1092 509.5,-1092 509.5,-1092 503.5,-1092 497.5,-1086 497.5,-1080 497.5,-1080 497.5,-1052 497.5,-1052 497.5,-1046 503.5,-1040 509.5,-1040 509.5,-1040 648.5,-1040 648.5,-1040 654.5,-1040 660.5,-1046 660.5,-1052 660.5,-1052 660.5,-1080 660.5,-1080 660.5,-1086 654.5,-1092 648.5,-1092"/>
+<text text-anchor="middle" x="579" y="-1069.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Gwibernant Robbs Boy</text>
+<text text-anchor="middle" x="579" y="-1055.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- sam -->
+<g id="node6" class="node">
+<title>sam</title>
+<g id="a_node6"><a xlink:title="Sam of Simonsseat">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M643.5,-1166C643.5,-1166 514.5,-1166 514.5,-1166 508.5,-1166 502.5,-1160 502.5,-1154 502.5,-1154 502.5,-1126 502.5,-1126 502.5,-1120 508.5,-1114 514.5,-1114 514.5,-1114 643.5,-1114 643.5,-1114 649.5,-1114 655.5,-1120 655.5,-1126 655.5,-1126 655.5,-1154 655.5,-1154 655.5,-1160 649.5,-1166 643.5,-1166"/>
+<text text-anchor="middle" x="579" y="-1143.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Sam of Simonsseat</text>
+<text text-anchor="middle" x="579" y="-1129.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- lywoodsmut -->
+<g id="node7" class="node">
+<title>lywoodsmut</title>
+<g id="a_node7"><a xlink:title="Lywood Smut">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M643.5,-1018C643.5,-1018 514.5,-1018 514.5,-1018 508.5,-1018 502.5,-1012 502.5,-1006 502.5,-1006 502.5,-978 502.5,-978 502.5,-972 508.5,-966 514.5,-966 514.5,-966 643.5,-966 643.5,-966 649.5,-966 655.5,-972 655.5,-978 655.5,-978 655.5,-1006 655.5,-1006 655.5,-1012 649.5,-1018 643.5,-1018"/>
+<text text-anchor="middle" x="579" y="-988.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Lywood Smut</text>
+</a>
+</g>
+</g>
+<!-- bouncer -->
+<g id="node8" class="node">
+<title>bouncer</title>
+<g id="a_node8"><a xlink:title="Lywood Bouncer">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M885,-1032C885,-1032 756,-1032 756,-1032 750,-1032 744,-1026 744,-1020 744,-1020 744,-992 744,-992 744,-986 750,-980 756,-980 756,-980 885,-980 885,-980 891,-980 897,-986 897,-992 897,-992 897,-1020 897,-1020 897,-1026 891,-1032 885,-1032"/>
+<text text-anchor="middle" x="820.5" y="-1009.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Lywood Bouncer</text>
+<text text-anchor="middle" x="820.5" y="-995.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- crowhill -->
+<g id="node9" class="node">
+<title>crowhill</title>
+<g id="a_node9"><a xlink:title="FTCh Crowhill Spinner">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M409,-795C409,-795 273,-795 273,-795 267,-795 261,-789 261,-783 261,-783 261,-755 261,-755 261,-749 267,-743 273,-743 273,-743 409,-743 409,-743 415,-743 421,-749 421,-755 421,-755 421,-783 421,-783 421,-789 415,-795 409,-795"/>
+<text text-anchor="middle" x="341" y="-772.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Crowhill Spinner</text>
+<text text-anchor="middle" x="341" y="-758.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- susan -->
+<g id="node10" class="node">
+<title>susan</title>
+<g id="a_node10"><a xlink:title="FTCh Badgercourt Susan">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M656,-795C656,-795 502,-795 502,-795 496,-795 490,-789 490,-783 490,-783 490,-755 490,-755 490,-749 496,-743 502,-743 502,-743 656,-743 656,-743 662,-743 668,-749 668,-755 668,-755 668,-783 668,-783 668,-789 662,-795 656,-795"/>
+<text text-anchor="middle" x="579" y="-772.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Badgercourt Susan</text>
+<text text-anchor="middle" x="579" y="-758.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- don -->
+<g id="node11" class="node">
+<title>don</title>
+<g id="a_node11"><a xlink:title="FTCh Don of Bronton">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M885,-735C885,-735 756,-735 756,-735 750,-735 744,-729 744,-723 744,-723 744,-695 744,-695 744,-689 750,-683 756,-683 756,-683 885,-683 885,-683 891,-683 897,-689 897,-695 897,-695 897,-723 897,-723 897,-729 891,-735 885,-735"/>
+<text text-anchor="middle" x="820.5" y="-712.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Don of Bronton</text>
+<text text-anchor="middle" x="820.5" y="-698.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- druid -->
+<g id="node12" class="node">
+<title>druid</title>
+<g id="a_node12"><a xlink:title="FTCh Badgercourt Druid">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1139.5,-793C1139.5,-793 991.5,-793 991.5,-793 985.5,-793 979.5,-787 979.5,-781 979.5,-781 979.5,-753 979.5,-753 979.5,-747 985.5,-741 991.5,-741 991.5,-741 1139.5,-741 1139.5,-741 1145.5,-741 1151.5,-747 1151.5,-753 1151.5,-753 1151.5,-781 1151.5,-781 1151.5,-787 1145.5,-793 1139.5,-793"/>
+<text text-anchor="middle" x="1065.5" y="-770.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Badgercourt Druid</text>
+<text text-anchor="middle" x="1065.5" y="-756.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- castlings -->
+<g id="node13" class="node">
+<title>castlings</title>
+<g id="a_node13"><a xlink:title="FTW Castlings Delight">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1132.5,-1021C1132.5,-1021 998.5,-1021 998.5,-1021 992.5,-1021 986.5,-1015 986.5,-1009 986.5,-1009 986.5,-981 986.5,-981 986.5,-975 992.5,-969 998.5,-969 998.5,-969 1132.5,-969 1132.5,-969 1138.5,-969 1144.5,-975 1144.5,-981 1144.5,-981 1144.5,-1009 1144.5,-1009 1144.5,-1015 1138.5,-1021 1132.5,-1021"/>
+<text text-anchor="middle" x="1065.5" y="-998.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTW Castlings Delight</text>
+<text text-anchor="middle" x="1065.5" y="-984.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- skipper -->
+<g id="node14" class="node">
+<title>skipper</title>
+<g id="a_node14"><a xlink:title="FTCh Skipper of Arford">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1383.5,-1021C1383.5,-1021 1244.5,-1021 1244.5,-1021 1238.5,-1021 1232.5,-1015 1232.5,-1009 1232.5,-1009 1232.5,-981 1232.5,-981 1232.5,-975 1238.5,-969 1244.5,-969 1244.5,-969 1383.5,-969 1383.5,-969 1389.5,-969 1395.5,-975 1395.5,-981 1395.5,-981 1395.5,-1009 1395.5,-1009 1395.5,-1015 1389.5,-1021 1383.5,-1021"/>
+<text text-anchor="middle" x="1314" y="-998.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Skipper of Arford</text>
+<text text-anchor="middle" x="1314" y="-984.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- bomakama -->
+<g id="node15" class="node">
+<title>bomakama</title>
+<g id="a_node15"><a xlink:title="Bomakama Mist">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1130,-645C1130,-645 1001,-645 1001,-645 995,-645 989,-639 989,-633 989,-633 989,-605 989,-605 989,-599 995,-593 1001,-593 1001,-593 1130,-593 1130,-593 1136,-593 1142,-599 1142,-605 1142,-605 1142,-633 1142,-633 1142,-639 1136,-645 1130,-645"/>
+<text text-anchor="middle" x="1065.5" y="-615.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Bomakama Mist</text>
+</a>
+</g>
+</g>
+<!-- cortman -->
+<g id="node16" class="node">
+<title>cortman</title>
+<g id="a_node16"><a xlink:title="FTCh Cortman Lane">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1378.5,-606C1378.5,-606 1249.5,-606 1249.5,-606 1243.5,-606 1237.5,-600 1237.5,-594 1237.5,-594 1237.5,-566 1237.5,-566 1237.5,-560 1243.5,-554 1249.5,-554 1249.5,-554 1378.5,-554 1378.5,-554 1384.5,-554 1390.5,-560 1390.5,-566 1390.5,-566 1390.5,-594 1390.5,-594 1390.5,-600 1384.5,-606 1378.5,-606"/>
+<text text-anchor="middle" x="1314" y="-583.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Cortman Lane</text>
+<text text-anchor="middle" x="1314" y="-569.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- singrett -->
+<g id="node17" class="node">
+<title>singrett</title>
+<g id="a_node17"><a xlink:title="Singrett Joy">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M405.5,-870C405.5,-870 276.5,-870 276.5,-870 270.5,-870 264.5,-864 264.5,-858 264.5,-858 264.5,-830 264.5,-830 264.5,-824 270.5,-818 276.5,-818 276.5,-818 405.5,-818 405.5,-818 411.5,-818 417.5,-824 417.5,-830 417.5,-830 417.5,-858 417.5,-858 417.5,-864 411.5,-870 405.5,-870"/>
+<text text-anchor="middle" x="341" y="-840.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Singrett Joy</text>
+</a>
+</g>
+</g>
+<!-- blackrod -->
+<g id="node18" class="node">
+<title>blackrod</title>
+<g id="a_node18"><a xlink:title="Black Rod of Gwibernant">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M653.5,-870C653.5,-870 504.5,-870 504.5,-870 498.5,-870 492.5,-864 492.5,-858 492.5,-858 492.5,-830 492.5,-830 492.5,-824 498.5,-818 504.5,-818 504.5,-818 653.5,-818 653.5,-818 659.5,-818 665.5,-824 665.5,-830 665.5,-830 665.5,-858 665.5,-858 665.5,-864 659.5,-870 653.5,-870"/>
+<text text-anchor="middle" x="579" y="-840.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Black Rod of Gwibernant</text>
+</a>
+</g>
+</g>
+<!-- emmalene -->
+<g id="node19" class="node">
+<title>emmalene</title>
+<g id="a_node19"><a xlink:title="Emma Lene">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M643.5,-944C643.5,-944 514.5,-944 514.5,-944 508.5,-944 502.5,-938 502.5,-932 502.5,-932 502.5,-904 502.5,-904 502.5,-898 508.5,-892 514.5,-892 514.5,-892 643.5,-892 643.5,-892 649.5,-892 655.5,-898 655.5,-904 655.5,-904 655.5,-932 655.5,-932 655.5,-938 649.5,-944 643.5,-944"/>
+<text text-anchor="middle" x="579" y="-914.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Emma Lene</text>
+</a>
+</g>
+</g>
+<!-- dandelion -->
+<g id="node20" class="node">
+<title>dandelion</title>
+<g id="a_node20"><a xlink:title="FTCh Dandelion of Gwibernant">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M904,-944C904,-944 737,-944 737,-944 731,-944 725,-938 725,-932 725,-932 725,-904 725,-904 725,-898 731,-892 737,-892 737,-892 904,-892 904,-892 910,-892 916,-898 916,-904 916,-904 916,-932 916,-932 916,-938 910,-944 904,-944"/>
+<text text-anchor="middle" x="820.5" y="-921.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh Dandelion of Gwibernant</text>
+<text text-anchor="middle" x="820.5" y="-908.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- tuff -->
+<g id="node21" class="node">
+<title>tuff</title>
+<g id="a_node21"><a xlink:title="Tuff&#45;Tuff">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M885,-870C885,-870 756,-870 756,-870 750,-870 744,-864 744,-858 744,-858 744,-830 744,-830 744,-824 750,-818 756,-818 756,-818 885,-818 885,-818 891,-818 897,-824 897,-830 897,-830 897,-858 897,-858 897,-864 891,-870 885,-870"/>
+<text text-anchor="middle" x="820.5" y="-840.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Tuff&#45;Tuff</text>
+</a>
+</g>
+</g>
+<!-- mayfly -->
+<g id="node22" class="node">
+<title>mayfly</title>
+<g id="a_node22"><a xlink:title="FTCh Cresset Mayfly of Malverndale">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1130,-946.5C1130,-946.5 1001,-946.5 1001,-946.5 995,-946.5 989,-940.5 989,-934.5 989,-934.5 989,-901.5 989,-901.5 989,-895.5 995,-889.5 1001,-889.5 1001,-889.5 1130,-889.5 1130,-889.5 1136,-889.5 1142,-895.5 1142,-901.5 1142,-901.5 1142,-934.5 1142,-934.5 1142,-940.5 1136,-946.5 1130,-946.5"/>
+<text text-anchor="middle" x="1065.5" y="-927.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh Cresset Mayfly of</text>
+<text text-anchor="middle" x="1065.5" y="-914.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">Malverndale</text>
+<text text-anchor="middle" x="1065.5" y="-901.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- harrier -->
+<g id="node23" class="node">
+<title>harrier</title>
+<g id="a_node23"><a xlink:title="FTCh Hamers Harrier">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1130.5,-867C1130.5,-867 1000.5,-867 1000.5,-867 994.5,-867 988.5,-861 988.5,-855 988.5,-855 988.5,-827 988.5,-827 988.5,-821 994.5,-815 1000.5,-815 1000.5,-815 1130.5,-815 1130.5,-815 1136.5,-815 1142.5,-821 1142.5,-827 1142.5,-827 1142.5,-855 1142.5,-855 1142.5,-861 1136.5,-867 1130.5,-867"/>
+<text text-anchor="middle" x="1065.5" y="-844.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Hamers Harrier</text>
+<text text-anchor="middle" x="1065.5" y="-830.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- minstral -->
+<g id="node24" class="node">
+<title>minstral</title>
+<g id="a_node24"><a xlink:title="FTCh Malverndale Minstral of Glynvilla">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1393,-946.5C1393,-946.5 1235,-946.5 1235,-946.5 1229,-946.5 1223,-940.5 1223,-934.5 1223,-934.5 1223,-901.5 1223,-901.5 1223,-895.5 1229,-889.5 1235,-889.5 1235,-889.5 1393,-889.5 1393,-889.5 1399,-889.5 1405,-895.5 1405,-901.5 1405,-901.5 1405,-934.5 1405,-934.5 1405,-940.5 1399,-946.5 1393,-946.5"/>
+<text text-anchor="middle" x="1314" y="-927.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh Malverndale Minstral of</text>
+<text text-anchor="middle" x="1314" y="-914.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">Glynvilla</text>
+<text text-anchor="middle" x="1314" y="-901.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- griffin -->
+<g id="node25" class="node">
+<title>griffin</title>
+<g id="a_node25"><a xlink:title="FTCh Glynvilla Griffin">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1625,-948C1625,-948 1496,-948 1496,-948 1490,-948 1484,-942 1484,-936 1484,-936 1484,-908 1484,-908 1484,-902 1490,-896 1496,-896 1496,-896 1625,-896 1625,-896 1631,-896 1637,-902 1637,-908 1637,-908 1637,-936 1637,-936 1637,-942 1631,-948 1625,-948"/>
+<text text-anchor="middle" x="1560.5" y="-925.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Glynvilla Griffin</text>
+<text text-anchor="middle" x="1560.5" y="-911.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- kaiser -->
+<g id="node26" class="node">
+<title>kaiser</title>
+<g id="a_node26"><a xlink:title="Kaiser (identity to confirm)">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M1986,-948C1986,-948 1847,-948 1847,-948 1841,-948 1835,-942 1835,-936 1835,-936 1835,-908 1835,-908 1835,-902 1841,-896 1847,-896 1847,-896 1986,-896 1986,-896 1992,-896 1998,-902 1998,-908 1998,-908 1998,-936 1998,-936 1998,-942 1992,-948 1986,-948"/>
+<text text-anchor="middle" x="1916.5" y="-925.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">Kaiser (identity to confirm)</text>
+<text text-anchor="middle" x="1916.5" y="-912.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- scilla -->
+<g id="node27" class="node">
+<title>scilla</title>
+<g id="a_node27"><a xlink:title="FTCh Bricksclose Scilla">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1136.5,-719C1136.5,-719 994.5,-719 994.5,-719 988.5,-719 982.5,-713 982.5,-707 982.5,-707 982.5,-679 982.5,-679 982.5,-673 988.5,-667 994.5,-667 994.5,-667 1136.5,-667 1136.5,-667 1142.5,-667 1148.5,-673 1148.5,-679 1148.5,-679 1148.5,-707 1148.5,-707 1148.5,-713 1142.5,-719 1136.5,-719"/>
+<text text-anchor="middle" x="1065.5" y="-696.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Bricksclose Scilla</text>
+<text text-anchor="middle" x="1065.5" y="-682.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- matchwood -->
+<g id="node28" class="node">
+<title>matchwood</title>
+<g id="a_node28"><a xlink:title="FC/AFC Bricksclose Matchwood">
+<path fill="#164f4b" stroke="#7ce3ca" stroke-width="1.2" d="M1401,-793C1401,-793 1227,-793 1227,-793 1221,-793 1215,-787 1215,-781 1215,-781 1215,-753 1215,-753 1215,-747 1221,-741 1227,-741 1227,-741 1401,-741 1401,-741 1407,-741 1413,-747 1413,-753 1413,-753 1413,-781 1413,-781 1413,-787 1407,-793 1401,-793"/>
+<text text-anchor="middle" x="1314" y="-770.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FC/AFC Bricksclose Matchwood</text>
+<text text-anchor="middle" x="1314" y="-757.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">◆ MODERN LEAD</text>
+</a>
+</g>
+</g>
+<!-- sugarmoon -->
+<g id="node29" class="node">
+<title>sugarmoon</title>
+<g id="a_node29"><a xlink:title="Rancho Mistletoe&#39;s Sugar Moon">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1399,-867C1399,-867 1229,-867 1229,-867 1223,-867 1217,-861 1217,-855 1217,-855 1217,-827 1217,-827 1217,-821 1223,-815 1229,-815 1229,-815 1399,-815 1399,-815 1405,-815 1411,-821 1411,-827 1411,-827 1411,-855 1411,-855 1411,-861 1405,-867 1399,-867"/>
+<text text-anchor="middle" x="1314" y="-837.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">Rancho Mistletoe&#39;s Sugar Moon</text>
+</a>
+</g>
+</g>
+<!-- calendar -->
+<g id="node30" class="node">
+<title>calendar</title>
+<g id="a_node30"><a xlink:title="Southaven&#39;s Calendar Girl">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M1639,-874C1639,-874 1482,-874 1482,-874 1476,-874 1470,-868 1470,-862 1470,-862 1470,-834 1470,-834 1470,-828 1476,-822 1482,-822 1482,-822 1639,-822 1639,-822 1645,-822 1651,-828 1651,-834 1651,-834 1651,-862 1651,-862 1651,-868 1645,-874 1639,-874"/>
+<text text-anchor="middle" x="1560.5" y="-851.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Southaven&#39;s Calendar Girl</text>
+<text text-anchor="middle" x="1560.5" y="-837.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- dallas -->
+<g id="node31" class="node">
+<title>dallas</title>
+<g id="a_node31"><a xlink:title="Woodland&#39;s Dallas Maverick">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M1636.5,-800C1636.5,-800 1484.5,-800 1484.5,-800 1478.5,-800 1472.5,-794 1472.5,-788 1472.5,-788 1472.5,-760 1472.5,-760 1472.5,-754 1478.5,-748 1484.5,-748 1484.5,-748 1636.5,-748 1636.5,-748 1642.5,-748 1648.5,-754 1648.5,-760 1648.5,-760 1648.5,-788 1648.5,-788 1648.5,-794 1642.5,-800 1636.5,-800"/>
+<text text-anchor="middle" x="1560.5" y="-777.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">Woodland&#39;s Dallas Maverick</text>
+<text text-anchor="middle" x="1560.5" y="-764.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- thistle -->
+<g id="node32" class="node">
+<title>thistle</title>
+<g id="a_node32"><a xlink:title="FC/AFC Buccleuch Thistle">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1996,-680C1996,-680 1837,-680 1837,-680 1831,-680 1825,-674 1825,-668 1825,-668 1825,-640 1825,-640 1825,-634 1831,-628 1837,-628 1837,-628 1996,-628 1996,-628 2002,-628 2008,-634 2008,-640 2008,-640 2008,-668 2008,-668 2008,-674 2002,-680 1996,-680"/>
+<text text-anchor="middle" x="1916.5" y="-657.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FC/AFC Buccleuch Thistle</text>
+<text text-anchor="middle" x="1916.5" y="-643.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- briar -->
+<g id="node33" class="node">
+<title>briar</title>
+<g id="a_node33"><a xlink:title="Thistle&#39;s Brambles and Briars">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2246.5,-727C2246.5,-727 2089.5,-727 2089.5,-727 2083.5,-727 2077.5,-721 2077.5,-715 2077.5,-715 2077.5,-687 2077.5,-687 2077.5,-681 2083.5,-675 2089.5,-675 2089.5,-675 2246.5,-675 2246.5,-675 2252.5,-675 2258.5,-681 2258.5,-687 2258.5,-687 2258.5,-715 2258.5,-715 2258.5,-721 2252.5,-727 2246.5,-727"/>
+<text text-anchor="middle" x="2168" y="-704.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">Thistle&#39;s Brambles and Briars</text>
+<text text-anchor="middle" x="2168" y="-691.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- rytexrex -->
+<g id="node34" class="node">
+<title>rytexrex</title>
+<g id="a_node34"><a xlink:title="FTCh Rytex Rex">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M643.5,-616C643.5,-616 514.5,-616 514.5,-616 508.5,-616 502.5,-610 502.5,-604 502.5,-604 502.5,-576 502.5,-576 502.5,-570 508.5,-564 514.5,-564 514.5,-564 643.5,-564 643.5,-564 649.5,-564 655.5,-570 655.5,-576 655.5,-576 655.5,-604 655.5,-604 655.5,-610 649.5,-616 643.5,-616"/>
+<text text-anchor="middle" x="579" y="-593.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Rytex Rex</text>
+<text text-anchor="middle" x="579" y="-579.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- dusty -->
+<g id="node35" class="node">
+<title>dusty</title>
+<g id="a_node35"><a xlink:title="FTCh Badgercourt Dusty">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M895.5,-616C895.5,-616 745.5,-616 745.5,-616 739.5,-616 733.5,-610 733.5,-604 733.5,-604 733.5,-576 733.5,-576 733.5,-570 739.5,-564 745.5,-564 745.5,-564 895.5,-564 895.5,-564 901.5,-564 907.5,-570 907.5,-576 907.5,-576 907.5,-604 907.5,-604 907.5,-610 901.5,-616 895.5,-616"/>
+<text text-anchor="middle" x="820.5" y="-593.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Badgercourt Dusty</text>
+<text text-anchor="middle" x="820.5" y="-579.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- masterpiece -->
+<g id="node36" class="node">
+<title>masterpiece</title>
+<g id="a_node36"><a xlink:title="FTCh Bricksclose Masterpiece">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M902.5,-497C902.5,-497 738.5,-497 738.5,-497 732.5,-497 726.5,-491 726.5,-485 726.5,-485 726.5,-457 726.5,-457 726.5,-451 732.5,-445 738.5,-445 738.5,-445 902.5,-445 902.5,-445 908.5,-445 914.5,-451 914.5,-457 914.5,-457 914.5,-485 914.5,-485 914.5,-491 908.5,-497 902.5,-497"/>
+<text text-anchor="middle" x="820.5" y="-474.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh Bricksclose Masterpiece</text>
+<text text-anchor="middle" x="820.5" y="-461.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- gryphon -->
+<g id="node37" class="node">
+<title>gryphon</title>
+<g id="a_node37"><a xlink:title="FTW Badgercourt Gryphon">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1146,-497C1146,-497 985,-497 985,-497 979,-497 973,-491 973,-485 973,-485 973,-457 973,-457 973,-451 979,-445 985,-445 985,-445 1146,-445 1146,-445 1152,-445 1158,-451 1158,-457 1158,-457 1158,-485 1158,-485 1158,-491 1152,-497 1146,-497"/>
+<text text-anchor="middle" x="1065.5" y="-474.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTW Badgercourt Gryphon</text>
+<text text-anchor="middle" x="1065.5" y="-460.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- bramble -->
+<g id="node38" class="node">
+<title>bramble</title>
+<g id="a_node38"><a xlink:title="FTW Birtenshaw Bramble">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1142,-571C1142,-571 989,-571 989,-571 983,-571 977,-565 977,-559 977,-559 977,-531 977,-531 977,-525 983,-519 989,-519 989,-519 1142,-519 1142,-519 1148,-519 1154,-525 1154,-531 1154,-531 1154,-559 1154,-559 1154,-565 1148,-571 1142,-571"/>
+<text text-anchor="middle" x="1065.5" y="-548.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTW Birtenshaw Bramble</text>
+<text text-anchor="middle" x="1065.5" y="-534.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- kr -->
+<g id="node39" class="node">
+<title>kr</title>
+<g id="a_node39"><a xlink:title="FTCh Kenine Robb of Rytex">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1398.5,-532C1398.5,-532 1229.5,-532 1229.5,-532 1223.5,-532 1217.5,-526 1217.5,-520 1217.5,-520 1217.5,-492 1217.5,-492 1217.5,-486 1223.5,-480 1229.5,-480 1229.5,-480 1398.5,-480 1398.5,-480 1404.5,-480 1410.5,-486 1410.5,-492 1410.5,-492 1410.5,-520 1410.5,-520 1410.5,-526 1404.5,-532 1398.5,-532"/>
+<text text-anchor="middle" x="1314" y="-509.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Kenine Robb of Rytex</text>
+<text text-anchor="middle" x="1314" y="-495.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- siskin -->
+<g id="node40" class="node">
+<title>siskin</title>
+<g id="a_node40"><a xlink:title="FTCh Sunnybrae Siskin">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1385.5,-680C1385.5,-680 1242.5,-680 1242.5,-680 1236.5,-680 1230.5,-674 1230.5,-668 1230.5,-668 1230.5,-640 1230.5,-640 1230.5,-634 1236.5,-628 1242.5,-628 1242.5,-628 1385.5,-628 1385.5,-628 1391.5,-628 1397.5,-634 1397.5,-640 1397.5,-640 1397.5,-668 1397.5,-668 1397.5,-674 1391.5,-680 1385.5,-680"/>
+<text text-anchor="middle" x="1314" y="-657.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Sunnybrae Siskin</text>
+<text text-anchor="middle" x="1314" y="-643.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- art -->
+<g id="node41" class="node">
+<title>art</title>
+<g id="a_node41"><a xlink:title="FTCh Clarburgh Art">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1628.5,-606C1628.5,-606 1492.5,-606 1492.5,-606 1486.5,-606 1480.5,-600 1480.5,-594 1480.5,-594 1480.5,-566 1480.5,-566 1480.5,-560 1486.5,-554 1492.5,-554 1492.5,-554 1628.5,-554 1628.5,-554 1634.5,-554 1640.5,-560 1640.5,-566 1640.5,-566 1640.5,-594 1640.5,-594 1640.5,-600 1634.5,-606 1628.5,-606"/>
+<text text-anchor="middle" x="1560.5" y="-583.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Clarburgh Art</text>
+<text text-anchor="middle" x="1560.5" y="-569.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- amy -->
+<g id="node42" class="node">
+<title>amy</title>
+<g id="a_node42"><a xlink:title="FTCh Clarburgh Amy">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1628.5,-680C1628.5,-680 1492.5,-680 1492.5,-680 1486.5,-680 1480.5,-674 1480.5,-668 1480.5,-668 1480.5,-640 1480.5,-640 1480.5,-634 1486.5,-628 1492.5,-628 1492.5,-628 1628.5,-628 1628.5,-628 1634.5,-628 1640.5,-634 1640.5,-640 1640.5,-640 1640.5,-668 1640.5,-668 1640.5,-674 1634.5,-680 1628.5,-680"/>
+<text text-anchor="middle" x="1560.5" y="-657.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Clarburgh Amy</text>
+<text text-anchor="middle" x="1560.5" y="-643.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- millshadow -->
+<g id="node43" class="node">
+<title>millshadow</title>
+<g id="a_node43"><a xlink:title="FTCh Millshadow Aster">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1630,-384C1630,-384 1491,-384 1491,-384 1485,-384 1479,-378 1479,-372 1479,-372 1479,-344 1479,-344 1479,-338 1485,-332 1491,-332 1491,-332 1630,-332 1630,-332 1636,-332 1642,-338 1642,-344 1642,-344 1642,-372 1642,-372 1642,-378 1636,-384 1630,-384"/>
+<text text-anchor="middle" x="1560.5" y="-361.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Millshadow Aster</text>
+<text text-anchor="middle" x="1560.5" y="-347.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- ringo -->
+<g id="node44" class="node">
+<title>ringo</title>
+<g id="a_node44"><a xlink:title="FTCh Rytex Ringo">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1984.5,-606C1984.5,-606 1848.5,-606 1848.5,-606 1842.5,-606 1836.5,-600 1836.5,-594 1836.5,-594 1836.5,-566 1836.5,-566 1836.5,-560 1842.5,-554 1848.5,-554 1848.5,-554 1984.5,-554 1984.5,-554 1990.5,-554 1996.5,-560 1996.5,-566 1996.5,-566 1996.5,-594 1996.5,-594 1996.5,-600 1990.5,-606 1984.5,-606"/>
+<text text-anchor="middle" x="1916.5" y="-583.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Rytex Ringo</text>
+<text text-anchor="middle" x="1916.5" y="-569.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- blue -->
+<g id="node45" class="node">
+<title>blue</title>
+<g id="a_node45"><a xlink:title="FTCh Rosebay Blue">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2236,-615C2236,-615 2100,-615 2100,-615 2094,-615 2088,-609 2088,-603 2088,-603 2088,-575 2088,-575 2088,-569 2094,-563 2100,-563 2100,-563 2236,-563 2236,-563 2242,-563 2248,-569 2248,-575 2248,-575 2248,-603 2248,-603 2248,-609 2242,-615 2236,-615"/>
+<text text-anchor="middle" x="2168" y="-592.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Rosebay Blue</text>
+<text text-anchor="middle" x="2168" y="-578.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- finglen -->
+<g id="node46" class="node">
+<title>finglen</title>
+<g id="a_node46"><a xlink:title="FTCh Finglen Tan">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1378.5,-326C1378.5,-326 1249.5,-326 1249.5,-326 1243.5,-326 1237.5,-320 1237.5,-314 1237.5,-314 1237.5,-286 1237.5,-286 1237.5,-280 1243.5,-274 1249.5,-274 1249.5,-274 1378.5,-274 1378.5,-274 1384.5,-274 1390.5,-280 1390.5,-286 1390.5,-286 1390.5,-314 1390.5,-314 1390.5,-320 1384.5,-326 1378.5,-326"/>
+<text text-anchor="middle" x="1314" y="-303.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Finglen Tan</text>
+<text text-anchor="middle" x="1314" y="-289.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- parkmaple -->
+<g id="node47" class="node">
+<title>parkmaple</title>
+<g id="a_node47"><a xlink:title="FTW Parkmaple Eel">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1378.5,-252C1378.5,-252 1249.5,-252 1249.5,-252 1243.5,-252 1237.5,-246 1237.5,-240 1237.5,-240 1237.5,-212 1237.5,-212 1237.5,-206 1243.5,-200 1249.5,-200 1249.5,-200 1378.5,-200 1378.5,-200 1384.5,-200 1390.5,-206 1390.5,-212 1390.5,-212 1390.5,-240 1390.5,-240 1390.5,-246 1384.5,-252 1378.5,-252"/>
+<text text-anchor="middle" x="1314" y="-229.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTW Parkmaple Eel</text>
+<text text-anchor="middle" x="1314" y="-215.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- jenoren -->
+<g id="node48" class="node">
+<title>jenoren</title>
+<g id="a_node48"><a xlink:title="FTCh Jenoren Boss">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1625,-289C1625,-289 1496,-289 1496,-289 1490,-289 1484,-283 1484,-277 1484,-277 1484,-249 1484,-249 1484,-243 1490,-237 1496,-237 1496,-237 1625,-237 1625,-237 1631,-237 1637,-243 1637,-249 1637,-249 1637,-277 1637,-277 1637,-283 1631,-289 1625,-289"/>
+<text text-anchor="middle" x="1560.5" y="-266.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Jenoren Boss</text>
+<text text-anchor="middle" x="1560.5" y="-252.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- dimple -->
+<g id="node49" class="node">
+<title>dimple</title>
+<g id="a_node49"><a xlink:title="Danywaun Dimple">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1378.5,-412C1378.5,-412 1249.5,-412 1249.5,-412 1243.5,-412 1237.5,-406 1237.5,-400 1237.5,-400 1237.5,-372 1237.5,-372 1237.5,-366 1243.5,-360 1249.5,-360 1249.5,-360 1378.5,-360 1378.5,-360 1384.5,-360 1390.5,-366 1390.5,-372 1390.5,-372 1390.5,-400 1390.5,-400 1390.5,-406 1384.5,-412 1378.5,-412"/>
+<text text-anchor="middle" x="1314" y="-382.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Danywaun Dimple</text>
+</a>
+</g>
+</g>
+<!-- dans -->
+<g id="node50" class="node">
+<title>dans</title>
+<g id="a_node50"><a xlink:title="Dans Beau of Chilview">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1628.5,-458C1628.5,-458 1492.5,-458 1492.5,-458 1486.5,-458 1480.5,-452 1480.5,-446 1480.5,-446 1480.5,-418 1480.5,-418 1480.5,-412 1486.5,-406 1492.5,-406 1492.5,-406 1628.5,-406 1628.5,-406 1634.5,-406 1640.5,-412 1640.5,-418 1640.5,-418 1640.5,-446 1640.5,-446 1640.5,-452 1634.5,-458 1628.5,-458"/>
+<text text-anchor="middle" x="1560.5" y="-428.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Dans Beau of Chilview</text>
+</a>
+</g>
+</g>
+<!-- ann -->
+<g id="node51" class="node">
+<title>ann</title>
+<g id="a_node51"><a xlink:title="FTW Chilview Ann of Steadroc">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1999,-486C1999,-486 1834,-486 1834,-486 1828,-486 1822,-480 1822,-474 1822,-474 1822,-446 1822,-446 1822,-440 1828,-434 1834,-434 1834,-434 1999,-434 1999,-434 2005,-434 2011,-440 2011,-446 2011,-446 2011,-474 2011,-474 2011,-480 2005,-486 1999,-486"/>
+<text text-anchor="middle" x="1916.5" y="-463.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTW Chilview Ann of Steadroc</text>
+<text text-anchor="middle" x="1916.5" y="-450.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- angel -->
+<g id="node52" class="node">
+<title>angel</title>
+<g id="a_node52"><a xlink:title="FTW Chilview Angel">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1981,-264C1981,-264 1852,-264 1852,-264 1846,-264 1840,-258 1840,-252 1840,-252 1840,-224 1840,-224 1840,-218 1846,-212 1852,-212 1852,-212 1981,-212 1981,-212 1987,-212 1993,-218 1993,-224 1993,-224 1993,-252 1993,-252 1993,-258 1987,-264 1981,-264"/>
+<text text-anchor="middle" x="1916.5" y="-241.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTW Chilview Angel</text>
+<text text-anchor="middle" x="1916.5" y="-227.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- kelmscott -->
+<g id="node53" class="node">
+<title>kelmscott</title>
+<g id="a_node53"><a xlink:title="FTW Kelmscott Bleiot">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1981,-412C1981,-412 1852,-412 1852,-412 1846,-412 1840,-406 1840,-400 1840,-400 1840,-372 1840,-372 1840,-366 1846,-360 1852,-360 1852,-360 1981,-360 1981,-360 1987,-360 1993,-366 1993,-372 1993,-372 1993,-400 1993,-400 1993,-406 1987,-412 1981,-412"/>
+<text text-anchor="middle" x="1916.5" y="-389.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTW Kelmscott Bleiot</text>
+<text text-anchor="middle" x="1916.5" y="-375.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- acker -->
+<g id="node54" class="node">
+<title>acker</title>
+<g id="a_node54"><a xlink:title="FTCh Steadroc Acker of Flintwood">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M2232.5,-466.5C2232.5,-466.5 2103.5,-466.5 2103.5,-466.5 2097.5,-466.5 2091.5,-460.5 2091.5,-454.5 2091.5,-454.5 2091.5,-421.5 2091.5,-421.5 2091.5,-415.5 2097.5,-409.5 2103.5,-409.5 2103.5,-409.5 2232.5,-409.5 2232.5,-409.5 2238.5,-409.5 2244.5,-415.5 2244.5,-421.5 2244.5,-421.5 2244.5,-454.5 2244.5,-454.5 2244.5,-460.5 2238.5,-466.5 2232.5,-466.5"/>
+<text text-anchor="middle" x="2168" y="-447.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh Steadroc Acker of</text>
+<text text-anchor="middle" x="2168" y="-434.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">Flintwood</text>
+<text text-anchor="middle" x="2168" y="-421.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- sara -->
+<g id="node55" class="node">
+<title>sara</title>
+<g id="a_node55"><a xlink:title="Stokewood Sara">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M2232.5,-387C2232.5,-387 2103.5,-387 2103.5,-387 2097.5,-387 2091.5,-381 2091.5,-375 2091.5,-375 2091.5,-347 2091.5,-347 2091.5,-341 2097.5,-335 2103.5,-335 2103.5,-335 2232.5,-335 2232.5,-335 2238.5,-335 2244.5,-341 2244.5,-347 2244.5,-347 2244.5,-375 2244.5,-375 2244.5,-381 2238.5,-387 2232.5,-387"/>
+<text text-anchor="middle" x="2168" y="-357.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Stokewood Sara</text>
+</a>
+</g>
+</g>
+<!-- ashlen -->
+<g id="node56" class="node">
+<title>ashlen</title>
+<g id="a_node56"><a xlink:title="Moorlough Ashlen">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M2496,-387C2496,-387 2367,-387 2367,-387 2361,-387 2355,-381 2355,-375 2355,-375 2355,-347 2355,-347 2355,-341 2361,-335 2367,-335 2367,-335 2496,-335 2496,-335 2502,-335 2508,-341 2508,-347 2508,-347 2508,-375 2508,-375 2508,-381 2502,-387 2496,-387"/>
+<text text-anchor="middle" x="2431.5" y="-364.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Moorlough Ashlen</text>
+<text text-anchor="middle" x="2431.5" y="-350.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- knots -->
+<g id="node57" class="node">
+<title>knots</title>
+<g id="a_node57"><a xlink:title="Knots and Crosses by Quincegrove">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2526,-312C2526,-312 2337,-312 2337,-312 2331,-312 2325,-306 2325,-300 2325,-300 2325,-272 2325,-272 2325,-266 2331,-260 2337,-260 2337,-260 2526,-260 2526,-260 2532,-260 2538,-266 2538,-272 2538,-272 2538,-300 2538,-300 2538,-306 2532,-312 2526,-312"/>
+<text text-anchor="middle" x="2431.5" y="-289.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">Knots and Crosses by Quincegrove</text>
+<text text-anchor="middle" x="2431.5" y="-276.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- salander -->
+<g id="node58" class="node">
+<title>salander</title>
+<g id="a_node58"><a xlink:title="Moorlough Salander">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2758.5,-349C2758.5,-349 2622.5,-349 2622.5,-349 2616.5,-349 2610.5,-343 2610.5,-337 2610.5,-337 2610.5,-309 2610.5,-309 2610.5,-303 2616.5,-297 2622.5,-297 2622.5,-297 2758.5,-297 2758.5,-297 2764.5,-297 2770.5,-303 2770.5,-309 2770.5,-309 2770.5,-337 2770.5,-337 2770.5,-343 2764.5,-349 2758.5,-349"/>
+<text text-anchor="middle" x="2690.5" y="-326.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Moorlough Salander</text>
+<text text-anchor="middle" x="2690.5" y="-312.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- superscud -->
+<g id="node59" class="node">
+<title>superscud</title>
+<g id="a_node59"><a xlink:title="FTCh Superscud Swank of Stagsden">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M1989,-189.5C1989,-189.5 1844,-189.5 1844,-189.5 1838,-189.5 1832,-183.5 1832,-177.5 1832,-177.5 1832,-144.5 1832,-144.5 1832,-138.5 1838,-132.5 1844,-132.5 1844,-132.5 1989,-132.5 1989,-132.5 1995,-132.5 2001,-138.5 2001,-144.5 2001,-144.5 2001,-177.5 2001,-177.5 2001,-183.5 1995,-189.5 1989,-189.5"/>
+<text text-anchor="middle" x="1916.5" y="-170.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh Superscud Swank of</text>
+<text text-anchor="middle" x="1916.5" y="-157.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">Stagsden</text>
+<text text-anchor="middle" x="1916.5" y="-144.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- solar -->
+<g id="node60" class="node">
+<title>solar</title>
+<g id="a_node60"><a xlink:title="NAFC/FC/AFC Sundart Solar">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M2256,-222C2256,-222 2080,-222 2080,-222 2074,-222 2068,-216 2068,-210 2068,-210 2068,-182 2068,-182 2068,-176 2074,-170 2080,-170 2080,-170 2256,-170 2256,-170 2262,-170 2268,-176 2268,-182 2268,-182 2268,-210 2268,-210 2268,-216 2262,-222 2256,-222"/>
+<text text-anchor="middle" x="2168" y="-199.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">NAFC/FC/AFC Sundart Solar</text>
+<text text-anchor="middle" x="2168" y="-185.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- lilsis -->
+<g id="node61" class="node">
+<title>lilsis</title>
+<g id="a_node61"><a xlink:title="Shamrock&#39;s Lil Sis">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M2232.5,-148C2232.5,-148 2103.5,-148 2103.5,-148 2097.5,-148 2091.5,-142 2091.5,-136 2091.5,-136 2091.5,-108 2091.5,-108 2091.5,-102 2097.5,-96 2103.5,-96 2103.5,-96 2232.5,-96 2232.5,-96 2238.5,-96 2244.5,-102 2244.5,-108 2244.5,-108 2244.5,-136 2244.5,-136 2244.5,-142 2238.5,-148 2232.5,-148"/>
+<text text-anchor="middle" x="2168" y="-118.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Shamrock&#39;s Lil Sis</text>
+</a>
+</g>
+</g>
+<!-- bullitt -->
+<g id="node62" class="node">
+<title>bullitt</title>
+<g id="a_node62"><a xlink:title="FC/AFC Sagemoors Silver Bullitt">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M2519.5,-174C2519.5,-174 2343.5,-174 2343.5,-174 2337.5,-174 2331.5,-168 2331.5,-162 2331.5,-162 2331.5,-134 2331.5,-134 2331.5,-128 2337.5,-122 2343.5,-122 2343.5,-122 2519.5,-122 2519.5,-122 2525.5,-122 2531.5,-128 2531.5,-134 2531.5,-134 2531.5,-162 2531.5,-162 2531.5,-168 2525.5,-174 2519.5,-174"/>
+<text text-anchor="middle" x="2431.5" y="-151.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">FC/AFC Sagemoors Silver Bullitt</text>
+<text text-anchor="middle" x="2431.5" y="-138.4" font-family="Arial" font-size="12.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- makers -->
+<g id="node63" class="node">
+<title>makers</title>
+<g id="a_node63"><a xlink:title="FC/AFC Hearthrock Makers Mark">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M2520.5,-100C2520.5,-100 2342.5,-100 2342.5,-100 2336.5,-100 2330.5,-94 2330.5,-88 2330.5,-88 2330.5,-60 2330.5,-60 2330.5,-54 2336.5,-48 2342.5,-48 2342.5,-48 2520.5,-48 2520.5,-48 2526.5,-48 2532.5,-54 2532.5,-60 2532.5,-60 2532.5,-88 2532.5,-88 2532.5,-94 2526.5,-100 2520.5,-100"/>
+<text text-anchor="middle" x="2431.5" y="-70.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">FC/AFC Hearthrock Makers Mark</text>
+</a>
+</g>
+</g>
+<!-- mayhem -->
+<g id="node64" class="node">
+<title>mayhem</title>
+<g id="a_node64"><a xlink:title="FTCh Hearthrock&#39;s Mayhem">
+<path fill="#4c3c23" stroke="#ecc886" stroke-width="1.2" d="M2774,-126C2774,-126 2607,-126 2607,-126 2601,-126 2595,-120 2595,-114 2595,-114 2595,-86 2595,-86 2595,-80 2601,-74 2607,-74 2607,-74 2774,-74 2774,-74 2780,-74 2786,-80 2786,-86 2786,-86 2786,-114 2786,-114 2786,-120 2780,-126 2774,-126"/>
+<text text-anchor="middle" x="2690.5" y="-103.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Hearthrock&#39;s Mayhem</text>
+<text text-anchor="middle" x="2690.5" y="-89.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">◌ AUDIT REQUIRED</text>
+</a>
+</g>
+</g>
+<!-- fred -->
+<g id="node65" class="node">
+<title>fred</title>
+<g id="a_node65"><a xlink:title="FTCh/AFTCh Narvin&#39;s Fred">
+<path fill="#23344b" stroke="#a7b8d0" stroke-width="1.2" d="M2772.5,-52C2772.5,-52 2608.5,-52 2608.5,-52 2602.5,-52 2596.5,-46 2596.5,-40 2596.5,-40 2596.5,-12 2596.5,-12 2596.5,-6 2602.5,0 2608.5,0 2608.5,0 2772.5,0 2772.5,0 2778.5,0 2784.5,-6 2784.5,-12 2784.5,-12 2784.5,-40 2784.5,-40 2784.5,-46 2778.5,-52 2772.5,-52"/>
+<text text-anchor="middle" x="2690.5" y="-29.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh/AFTCh Narvin&#39;s Fred</text>
+<text text-anchor="middle" x="2690.5" y="-15.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh / FTW</text>
+</a>
+</g>
+</g>
+<!-- minnie -->
+<g id="node66" class="node">
+<title>minnie</title>
+<g id="a_node66"><a xlink:title="Gaspereaumtn Minnie BB">
+<path fill="#164f4b" stroke="#7ce3ca" stroke-width="1.2" d="M3008,-66C3008,-66 2855,-66 2855,-66 2849,-66 2843,-60 2843,-54 2843,-54 2843,-26 2843,-26 2843,-20 2849,-14 2855,-14 2855,-14 3008,-14 3008,-14 3014,-14 3020,-20 3020,-26 3020,-26 3020,-54 3020,-54 3020,-60 3014,-66 3008,-66"/>
+<text text-anchor="middle" x="2931.5" y="-43.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Gaspereaumtn Minnie BB</text>
+<text text-anchor="middle" x="2931.5" y="-29.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">◆ MODERN LEAD</text>
+</a>
+</g>
+</g>
+<!-- sker -->
+<g id="node67" class="node">
+<title>sker</title>
+<g id="a_node67"><a xlink:title="FTCh Steadroc Sker">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2236,-541C2236,-541 2100,-541 2100,-541 2094,-541 2088,-535 2088,-529 2088,-529 2088,-501 2088,-501 2088,-495 2094,-489 2100,-489 2100,-489 2236,-489 2236,-489 2242,-489 2248,-495 2248,-501 2248,-501 2248,-529 2248,-529 2248,-535 2242,-541 2236,-541"/>
+<text text-anchor="middle" x="2168" y="-518.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Steadroc Sker</text>
+<text text-anchor="middle" x="2168" y="-504.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- gyso -->
+<g id="node68" class="node">
+<title>gyso</title>
+<g id="a_node68"><a xlink:title="Hannahs Gysophilia Milly">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1636,-532C1636,-532 1485,-532 1485,-532 1479,-532 1473,-526 1473,-520 1473,-520 1473,-492 1473,-492 1473,-486 1479,-480 1485,-480 1485,-480 1636,-480 1636,-480 1642,-480 1648,-486 1648,-492 1648,-492 1648,-520 1648,-520 1648,-526 1642,-532 1636,-532"/>
+<text text-anchor="middle" x="1560.5" y="-509.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Hannahs Gysophilia Milly</text>
+<text text-anchor="middle" x="1560.5" y="-495.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- beggar -->
+<g id="node69" class="node">
+<title>beggar</title>
+<g id="a_node69"><a xlink:title="Beggarbush Ash">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1984.5,-338C1984.5,-338 1848.5,-338 1848.5,-338 1842.5,-338 1836.5,-332 1836.5,-326 1836.5,-326 1836.5,-298 1836.5,-298 1836.5,-292 1842.5,-286 1848.5,-286 1848.5,-286 1984.5,-286 1984.5,-286 1990.5,-286 1996.5,-292 1996.5,-298 1996.5,-298 1996.5,-326 1996.5,-326 1996.5,-332 1990.5,-338 1984.5,-338"/>
+<text text-anchor="middle" x="1916.5" y="-315.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Beggarbush Ash</text>
+<text text-anchor="middle" x="1916.5" y="-301.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- everlasting -->
+<g id="node70" class="node">
+<title>everlasting</title>
+<g id="a_node70"><a xlink:title="Everlasting Spirit of Quincegrove">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2232.5,-312.5C2232.5,-312.5 2103.5,-312.5 2103.5,-312.5 2097.5,-312.5 2091.5,-306.5 2091.5,-300.5 2091.5,-300.5 2091.5,-267.5 2091.5,-267.5 2091.5,-261.5 2097.5,-255.5 2103.5,-255.5 2103.5,-255.5 2232.5,-255.5 2232.5,-255.5 2238.5,-255.5 2244.5,-261.5 2244.5,-267.5 2244.5,-267.5 2244.5,-300.5 2244.5,-300.5 2244.5,-306.5 2238.5,-312.5 2232.5,-312.5"/>
+<text text-anchor="middle" x="2168" y="-293.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">Everlasting Spirit of</text>
+<text text-anchor="middle" x="2168" y="-280.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">Quincegrove</text>
+<text text-anchor="middle" x="2168" y="-267.9" font-family="Arial" font-size="12.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- retes -->
+<g id="node71" class="node">
+<title>retes</title>
+<g id="a_node71"><a xlink:title="FTCh Rytex Retes">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M1984.5,-807C1984.5,-807 1848.5,-807 1848.5,-807 1842.5,-807 1836.5,-801 1836.5,-795 1836.5,-795 1836.5,-767 1836.5,-767 1836.5,-761 1842.5,-755 1848.5,-755 1848.5,-755 1984.5,-755 1984.5,-755 1990.5,-755 1996.5,-761 1996.5,-767 1996.5,-767 1996.5,-795 1996.5,-795 1996.5,-801 1990.5,-807 1984.5,-807"/>
+<text text-anchor="middle" x="1916.5" y="-784.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">FTCh Rytex Retes</text>
+<text text-anchor="middle" x="1916.5" y="-770.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- syncerus -->
+<g id="node72" class="node">
+<title>syncerus</title>
+<g id="a_node72"><a xlink:title="Syncerus Satan">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2236,-822C2236,-822 2100,-822 2100,-822 2094,-822 2088,-816 2088,-810 2088,-810 2088,-782 2088,-782 2088,-776 2094,-770 2100,-770 2100,-770 2236,-770 2236,-770 2242,-770 2248,-776 2248,-782 2248,-782 2248,-810 2248,-810 2248,-816 2242,-822 2236,-822"/>
+<text text-anchor="middle" x="2168" y="-799.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Syncerus Satan</text>
+<text text-anchor="middle" x="2168" y="-785.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- sussex -->
+<g id="node73" class="node">
+<title>sussex</title>
+<g id="a_node73"><a xlink:title="Sussexoak Woodland Lass">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2513,-822C2513,-822 2350,-822 2350,-822 2344,-822 2338,-816 2338,-810 2338,-810 2338,-782 2338,-782 2338,-776 2344,-770 2350,-770 2350,-770 2513,-770 2513,-770 2519,-770 2525,-776 2525,-782 2525,-782 2525,-810 2525,-810 2525,-816 2519,-822 2513,-822"/>
+<text text-anchor="middle" x="2431.5" y="-799.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Sussexoak Woodland Lass</text>
+<text text-anchor="middle" x="2431.5" y="-785.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+<!-- domino -->
+<g id="node74" class="node">
+<title>domino</title>
+<g id="a_node74"><a xlink:title="Sussexoak Domino">
+<path fill="#592b3c" stroke="#ff9aa5" stroke-width="1.2" d="M2758.5,-822C2758.5,-822 2622.5,-822 2622.5,-822 2616.5,-822 2610.5,-816 2610.5,-810 2610.5,-810 2610.5,-782 2610.5,-782 2610.5,-776 2616.5,-770 2622.5,-770 2622.5,-770 2758.5,-770 2758.5,-770 2764.5,-770 2770.5,-776 2770.5,-782 2770.5,-782 2770.5,-810 2770.5,-810 2770.5,-816 2764.5,-822 2758.5,-822"/>
+<text text-anchor="middle" x="2690.5" y="-799.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">Sussexoak Domino</text>
+<text text-anchor="middle" x="2690.5" y="-785.6" font-family="Arial" font-size="13.00" fill="#f5f8ff">⛔ KR DESCENDANT</text>
+</a>
+</g>
+</g>
+</g>
+</svg>
+<div class="hint">Drag to pan · Scroll or pinch to zoom · Tap a dog to inspect</div></div><div class="foot">This is a selective ancestry map, not a complete pedigree or a certification that a dog is KR-free. Solid lines show named parent-child relationships from the sources inspected. A dashed line represents a multi-generation ancestry link or a relationship awaiting independent confirmation. Parentage may be incomplete; a blank link never means the ancestor is absent.</div></main>
+<aside class="side"><div class="side-card"><div class="eyebrow">SELECTED DOG</div><div class="title-row"><h2 id="dogName">Select a dog</h2><span class="status" id="dogStatus"></span></div><small id="dogYear"></small><p id="dogNotes"></p><div class="info-links" id="dogLinks"></div><p id="related" style="white-space:pre-line;font-size:12px;color:#99bed8"></p></div><div class="side-card"><h2>Jump to a key dog</h2><div class="toplinks"><button class="btn" data-focus="robbson">Robbson</button><button class="btn" data-focus="griffin">Glynvilla Griffin</button><button class="btn" data-focus="matchwood">Matchwood</button><button class="btn" data-focus="kr">KR</button><button class="btn" data-focus="minnie">Minnie</button></div></div><div class="side-card"><h2>Research snapshot</h2><div class="summary"><div><span class="bigstat">74</span><small>Named dogs</small></div><div><span class="bigstat">81</span><small>Relationship links</small></div></div><p style="font-size:12px">The original Gwibernant ancestry reached later British and North American trial dogs. Red confirms a KR descent on the shown evidence; green identifies promising modern research leads, <strong>not KR-free pedigrees</strong>.</p></div><div class="audit">Strict no-KR standard: every ancestor on <strong>both</strong> parents' sides must be checked. No current breeding pair has yet been fully certified under that test.</div></aside></div>
+<script>const DATA={"nodes":[{"id":"ashley","name":"FTCh Gwibernant Ashley Robb","status":"foundation","year":"1968","notes":"Parent of Robbson; an important older common ancestor.","links":[{"label":"Pedigree context","url":"https://dogs.pedigreeonline.com/kenine-robb-of-rytex-SXm22Spd/pedigree"}],"group":"uk","short":"Gwibernant Ashley Robb"},{"id":"macdonna","name":"Macsiccar Auchertyre Donna","status":"historic","year":"","notes":"Dam of Robbson.","links":[{"label":"Robbson ancestry","url":"https://dogs.pedigreeonline.com/kenine-robb-of-rytex-SXm22Spd/pedigree"}],"group":"uk","short":"Macsiccar Auchertyre Donna"},{"id":"robbson","name":"FTCh Robbson of Gwibernant","status":"foundation","year":"1973","notes":"The central ancestor under investigation. His offspring have branched into many international working lines.","links":[{"label":"Pedigree ancestry","url":"https://dogs.pedigreeonline.com/kenine-robb-of-rytex-SXm22Spd/pedigree"}],"group":"uk","short":"FTCh Robbson of Gwibernant"},{"id":"phantom","name":"Gwibernant Phantom","status":"foundation","year":"","notes":"Dam of Robbs Boy and Sam of Simonsseat in the recorded same-parent sibling list.","links":[{"label":"Dam and sibling list","url":"https://englishspringerspaniel.pedigreedatabaseonline.com/en/Gwibernant-Phantom/pedigree/26810/i"}],"group":"uk","short":"Gwibernant Phantom"},{"id":"robbboy","name":"Gwibernant Robbs Boy","status":"review","year":"","notes":"One of the original dogs we set out to trace. The Lywood Bouncer branch was identified earlier.","links":[{"label":"Original dog","url":"https://englishspringerspaniel.pedigreedatabaseonline.com/en/Gwibernant-Robbs-Boy/pedigree/26814/i"}],"group":"uk","short":"Gwibernant Robbs Boy"},{"id":"sam","name":"Sam of Simonsseat","status":"review","year":"","notes":"The other full sibling in the Gwibernant Phantom litter; its modern breeding descendants remain under investigation.","links":[{"label":"Same-parent siblings","url":"https://englishspringerspaniel.pedigreedatabaseonline.com/en/Gwibernant-Phantom/pedigree/26810/i"}],"group":"uk","short":"Sam of Simonsseat"},{"id":"lywoodsmut","name":"Lywood Smut","status":"historic","year":"","notes":"Recorded dam of Lywood Bouncer.","links":[{"label":"Lywood Smut","url":"https://englishspringerspaniel.pedigreedatabaseonline.com/en/Lywood-Smut/pedigree/30007/i"}],"group":"uk","short":"Lywood Smut"},{"id":"bouncer","name":"Lywood Bouncer","status":"review","year":"","notes":"Recorded offspring of Robbs Boy and Lywood Smut; later descendant chains need a complete independent audit.","links":[{"label":"Lywood Smut offspring","url":"https://englishspringerspaniel.pedigreedatabaseonline.com/en/Lywood-Smut/pedigree/30007/i"}],"group":"uk","short":"Lywood Bouncer"},{"id":"crowhill","name":"FTCh Crowhill Spinner","status":"historic","year":"","notes":"Dam of Badgercourt Susan in published pedigrees.","links":[{"label":"Stud pedigree","url":"https://dogs.pedigreeonline.com/kenine-robb-of-rytex-SXm22Spd/pedigree"}],"group":"uk","short":"FTCh Crowhill Spinner"},{"id":"susan","name":"FTCh Badgercourt Susan","status":"historic","year":"1976","notes":"Daughter of Robbson. A founding dam of both the Druid route and the later KR route.","links":[{"label":"Registered pedigree reference","url":"https://dogs.pedigreeonline.com/kenine-robb-of-rytex-SXm22Spd/pedigree"}],"group":"uk","short":"FTCh Badgercourt Susan"},{"id":"don","name":"FTCh Don of Bronton","status":"historic","year":"","notes":"Sire of Badgercourt Druid.","links":[{"label":"Druid pedigree","url":"https://www.champdogs.co.uk/dog/25467"}],"group":"uk","short":"FTCh Don of Bronton"},{"id":"druid","name":"FTCh Badgercourt Druid","status":"historic","year":"1979","notes":"Core pre-KR stud. Sire of Skipper of Arford, Cortman Lane and Bricksclose Matchwood.","links":[{"label":"Documented ancestry","url":"https://www.champdogs.co.uk/dog/25467"},{"label":"Matchwood pedigree","url":"https://essft.com/wp-content/uploads/2024/07/Maxine-Pedegree.pdf"}],"group":"uk","short":"FTCh Badgercourt Druid"},{"id":"castlings","name":"FTW Castlings Delight","status":"historic","year":"","notes":"Dam of Skipper of Arford.","links":[{"label":"Glynvilla background","url":"https://www.champdogs.co.uk/dog/25467"}],"group":"uk","short":"FTW Castlings Delight"},{"id":"skipper","name":"FTCh Skipper of Arford","status":"historic","year":"","notes":"Son of Druid, sire of Glynvilla Griffin.","links":[{"label":"Griffin pedigree","url":"https://www.champdogs.co.uk/dog/25467"}],"group":"uk","short":"FTCh Skipper of Arford"},{"id":"bomakama","name":"Bomakama Mist","status":"historic","year":"","notes":"Dam of Cortman Lane.","links":[{"label":"Cortman ancestry","url":"https://www.champdogs.co.uk/dog/31309"}],"group":"uk","short":"Bomakama Mist"},{"id":"cortman","name":"FTCh Cortman Lane","status":"historic","year":"1982","notes":"Keith Erlandson field trial champion; ancestor of Dans Beau of Chilview.","links":[{"label":"Dans Beau ancestry","url":"https://www.champdogs.co.uk/dog/31309"}],"group":"uk","short":"FTCh Cortman Lane"},{"id":"singrett","name":"Singrett Joy","status":"historic","year":"","notes":"Dam of Black Rod of Gwibernant.","links":[{"label":"Recorded pedigree","url":"https://dogs.pedigreeonline.com/bellbrook-bright-sZhEJoLN/pedigree"}],"group":"uk","short":"Singrett Joy"},{"id":"blackrod","name":"Black Rod of Gwibernant","status":"historic","year":"","notes":"Offspring of Robbson, sire of Dandelion of Gwibernant.","links":[{"label":"Dandelion ancestry","url":"https://dogs.pedigreeonline.com/bellbrook-bright-sZhEJoLN/pedigree"}],"group":"uk","short":"Black Rod of Gwibernant"},{"id":"emmalene","name":"Emma Lene","status":"historic","year":"","notes":"Dam of Dandelion of Gwibernant.","links":[{"label":"Dandelion ancestry","url":"https://dogs.pedigreeonline.com/bellbrook-bright-sZhEJoLN/pedigree"}],"group":"uk","short":"Emma Lene"},{"id":"dandelion","name":"FTCh Dandelion of Gwibernant","status":"historic","year":"1980","notes":"Pre-KR branch, maternal ancestor of Glynvilla Griffin.","links":[{"label":"Dandelion recorded pedigree","url":"https://dogs.pedigreeonline.com/bellbrook-bright-sZhEJoLN/pedigree"}],"group":"uk","short":"FTCh Dandelion of Gwibernant"},{"id":"tuff","name":"Tuff-Tuff","status":"historic","year":"","notes":"Parent of Cresset Mayfly.","links":[{"label":"Griffin background","url":"https://www.champdogs.co.uk/litter/6876"}],"group":"uk","short":"Tuff-Tuff"},{"id":"mayfly","name":"FTCh Cresset Mayfly of Malverndale","status":"historic","year":"","notes":"Daughter of Dandelion of Gwibernant.","links":[{"label":"Griffin ancestry","url":"https://www.champdogs.co.uk/litter/6876"}],"group":"uk","short":"FTCh Cresset Mayfly of Malverndale"},{"id":"harrier","name":"FTCh Hamers Harrier","status":"historic","year":"","notes":"Sire of Malverndale Minstral.","links":[{"label":"Griffin ancestry","url":"https://www.champdogs.co.uk/litter/6876"}],"group":"uk","short":"FTCh Hamers Harrier"},{"id":"minstral","name":"FTCh Malverndale Minstral of Glynvilla","status":"historic","year":"","notes":"Dam of Glynvilla Griffin.","links":[{"label":"Griffin ancestry","url":"https://www.champdogs.co.uk/litter/6876"}],"group":"uk","short":"FTCh Malverndale Minstral of Glynvilla"},{"id":"griffin","name":"FTCh Glynvilla Griffin","status":"historic","year":"","notes":"Combines two pre-KR branches: Skipper of Arford and Dandelion through Malverndale Minstral. This does not clear any modern progeny of KR.","links":[{"label":"Full pedigree","url":"https://www.champdogs.co.uk/dog/25467"}],"group":"uk","short":"FTCh Glynvilla Griffin"},{"id":"kaiser","name":"Kaiser (identity to confirm)","status":"review","year":"","notes":"User reports Kaiser as a son of Griffin. Full registered identity and parentage remain unverified; dotted connection shown accordingly.","links":[],"group":"uk","short":"Kaiser (?)"},{"id":"scilla","name":"FTCh Bricksclose Scilla","status":"historic","year":"","notes":"Dam of Matchwood according to the American pedigree reproduction.","links":[{"label":"Matchwood parentage","url":"https://essft.com/wp-content/uploads/2024/07/Maxine-Pedegree.pdf"}],"group":"america","short":"FTCh Bricksclose Scilla"},{"id":"matchwood","name":"FC/AFC Bricksclose Matchwood","status":"lead","year":"1985","notes":"Known as Badger. Old Druid ancestry preserved in America; breeder Mark Hairfield described using frozen semen decades later. Modern branches still need KR audits.","links":[{"label":"Pedigree source","url":"https://essft.com/wp-content/uploads/2024/07/Maxine-Pedegree.pdf"}],"group":"america","short":"FC/AFC Bricksclose Matchwood"},{"id":"sugarmoon","name":"Rancho Mistletoe's Sugar Moon","status":"historic","year":"","notes":"Dam of Southaven’s Calendar Girl in the recorded 2011 Matchwood mating.","links":[],"group":"america","short":"Rancho Mistletoe's Sugar Moon"},{"id":"calendar","name":"Southaven's Calendar Girl","status":"review","year":"2011","notes":"A Matchwood daughter; descendants appear in US trials. KR status of full pedigree not cleared.","links":[],"group":"america","short":"Southaven's Calendar Girl"},{"id":"dallas","name":"Woodland's Dallas Maverick","status":"review","year":"2011","notes":"Matchwood son. Historic database display has not shown KR, but gaps prevent a KR-free guarantee; KR’s sibling Kenine Tina appears in wider pedigree.","links":[{"label":"Pedigree database","url":"https://pedigree-database.com/module.php/portal/pedigree/detail/1670089?gens=10"},{"label":"Kennel website","url":"https://www.woodlandkennel.com/"}],"group":"america","short":"Woodland's Dallas Maverick"},{"id":"thistle","name":"FC/AFC Buccleuch Thistle","status":"kr","year":"","notes":"Has KR in her ancestry through Clarburgh Art and other branches; the KR-to-Thistle link is a multi-generation descent, not a direct parent-child relation.","links":[{"label":"2024 pedigree showing lineage","url":"https://essft.com/wp-content/uploads/2024/07/Maxine-Pedegree.pdf"}],"group":"america","short":"FC/AFC Buccleuch Thistle"},{"id":"briar","name":"Thistle's Brambles and Briars","status":"kr","year":"2015","notes":"Matchwood son via frozen semen, but mother Buccleuch Thistle introduced KR. Exclude for strict no-KR breeding goal.","links":[{"label":"Pedigree","url":"https://essft.com/wp-content/uploads/2024/07/Maxine-Pedegree.pdf"}],"group":"america","short":"Thistle's Brambles and Briars"},{"id":"rytexrex","name":"FTCh Rytex Rex","status":"historic","year":"","notes":"Sire of Badgercourt Dusty.","links":[{"label":"KR pedigree","url":"https://www.pedigreedatabase.com/english_springer_spaniel/dog.html?id=1912525-ftch-kenine-robb-of-rytex%3F_v%3D20130105145840"}],"group":"kr","short":"FTCh Rytex Rex"},{"id":"dusty","name":"FTCh Badgercourt Dusty","status":"historic","year":"","notes":"Daughter of Badgercourt Susan and Rytex Rex.","links":[{"label":"KR pedigree","url":"https://www.pedigreedatabase.com/english_springer_spaniel/dog.html?id=1912525-ftch-kenine-robb-of-rytex%3F_v%3D20130105145840"}],"group":"kr","short":"FTCh Badgercourt Dusty"},{"id":"masterpiece","name":"FTCh Bricksclose Masterpiece","status":"historic","year":"","notes":"Sire of Badgercourt Gryphon.","links":[{"label":"KR pedigree","url":"https://www.pedigreedatabase.com/english_springer_spaniel/dog.html?id=1912525-ftch-kenine-robb-of-rytex%3F_v%3D20130105145840"}],"group":"kr","short":"FTCh Bricksclose Masterpiece"},{"id":"gryphon","name":"FTW Badgercourt Gryphon","status":"historic","year":"","notes":"Sire of KR and his full sister Kenine Tina.","links":[{"label":"KR pedigree","url":"https://www.pedigreedatabase.com/english_springer_spaniel/dog.html?id=1912525-ftch-kenine-robb-of-rytex%3F_v%3D20130105145840"}],"group":"kr","short":"FTW Badgercourt Gryphon"},{"id":"bramble","name":"FTW Birtenshaw Bramble","status":"historic","year":"","notes":"Dam of KR.","links":[{"label":"KR pedigree","url":"https://www.pedigreedatabase.com/english_springer_spaniel/dog.html?id=1912525-ftch-kenine-robb-of-rytex%3F_v%3D20130105145840"}],"group":"kr","short":"FTW Birtenshaw Bramble"},{"id":"kr","name":"FTCh Kenine Robb of Rytex","status":"kr","year":"1989","notes":"The exact ancestor the search excludes. The red shading denotes descendants where KR is an established ancestor, not dogs who merely share older relatives.","links":[{"label":"KR pedigree","url":"https://www.pedigreedatabase.com/english_springer_spaniel/dog.html?id=1912525-ftch-kenine-robb-of-rytex%3F_v%3D20130105145840"}],"group":"kr","short":"FTCh Kenine Robb of Rytex"},{"id":"siskin","name":"FTCh Sunnybrae Siskin","status":"historic","year":"","notes":"Dam of Clarburgh Art and Clarburgh Amy.","links":[{"label":"Art pedigree","url":"https://www.champdogs.co.uk/dog/85324"}],"group":"kr","short":"FTCh Sunnybrae Siskin"},{"id":"art","name":"FTCh Clarburgh Art","status":"kr","year":"1995","notes":"Direct son of KR. Exclude his descendants.","links":[{"label":"Art genealogy","url":"https://www.champdogs.co.uk/dog/85324"}],"group":"kr","short":"FTCh Clarburgh Art"},{"id":"amy","name":"FTCh Clarburgh Amy","status":"kr","year":"","notes":"Direct daughter of KR; a separate influential excluded branch.","links":[{"label":"Sussexoak ancestry","url":"https://www.champdogs.co.uk/dog/67443"}],"group":"kr","short":"FTCh Clarburgh Amy"},{"id":"millshadow","name":"FTCh Millshadow Aster","status":"kr","year":"","notes":"Direct offspring of KR; offspring remain excluded for this project.","links":[{"label":"Pedigree context","url":"https://www.champdogs.co.uk/dog/54363"}],"group":"kr","short":"FTCh Millshadow Aster"},{"id":"ringo","name":"FTCh Rytex Ringo","status":"kr","year":"","notes":"Son of Clarburgh Art.","links":[{"label":"Ringo pedigree","url":"https://www.champdogs.co.uk/dog/85324"}],"group":"kr","short":"FTCh Rytex Ringo"},{"id":"blue","name":"FTCh Rosebay Blue","status":"kr","year":"","notes":"Son of Rytex Ringo. Countryways bloodline carries KR.","links":[{"label":"Ringo offspring","url":"https://www.champdogs.co.uk/dog/85324"}],"group":"kr","short":"FTCh Rosebay Blue"},{"id":"finglen","name":"FTCh Finglen Tan","status":"historic","year":"","notes":"Sire of Jenoren Boss.","links":[{"label":"Pedigree","url":"https://www.champdogs.co.uk/dog/31309"}],"group":"chilview","short":"FTCh Finglen Tan"},{"id":"parkmaple","name":"FTW Parkmaple Eel","status":"historic","year":"","notes":"Dam of Jenoren Boss.","links":[{"label":"Pedigree","url":"https://www.champdogs.co.uk/dog/31309"}],"group":"chilview","short":"FTW Parkmaple Eel"},{"id":"jenoren","name":"FTCh Jenoren Boss","status":"historic","year":"","notes":"Sire of Chilview Ann and Chilview Angel.","links":[{"label":"Steadroc ancestry","url":"https://www.champdogs.co.uk/dog/31309"}],"group":"chilview","short":"FTCh Jenoren Boss"},{"id":"dimple","name":"Danywaun Dimple","status":"historic","year":"","notes":"Dam of Dans Beau of Chilview.","links":[{"label":"Dans Beau pedigree","url":"https://www.champdogs.co.uk/dog/31309"}],"group":"chilview","short":"Danywaun Dimple"},{"id":"dans","name":"Dans Beau of Chilview","status":"historic","year":"","notes":"Daughter of Cortman Lane; dam of Chilview Ann and Angel.","links":[{"label":"Chilview ancestry","url":"https://www.champdogs.co.uk/dog/31309"}],"group":"chilview","short":"Dans Beau of Chilview"},{"id":"ann","name":"FTW Chilview Ann of Steadroc","status":"historic","year":"","notes":"Produced FTCh Steadroc Acker by Kelmscott Bleiot and FTCh Steadroc Sker by Clarburgh Art (KR descendant).","links":[{"label":"Ann pedigree","url":"https://englishspringerspaniel.pedigreedatabaseonline.com/en/Chilview-Ann-Of-Steadroc/pedigree/15189/i"}],"group":"chilview","short":"FTW Chilview Ann of Steadroc"},{"id":"angel","name":"FTW Chilview Angel","status":"historic","year":"1994","notes":"Full sister of Ann and dam of US National Amateur Field Champion Sundart Solar.","links":[{"label":"Angel pedigree","url":"https://englishspringerspaniel.pedigreedatabaseonline.com/en/Chilview-Angel/pedigree/23037/i"},{"label":"Solar pedigree","url":"https://dogs.pedigreeonline.com/sundart-solar-vjAjWH8w/pedigree"}],"group":"chilview","short":"FTW Chilview Angel"},{"id":"kelmscott","name":"FTW Kelmscott Bleiot","status":"historic","year":"","notes":"Sire of Steadroc Acker.","links":[{"label":"Acker pedigree","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"chilview","short":"FTW Kelmscott Bleiot"},{"id":"acker","name":"FTCh Steadroc Acker of Flintwood","status":"review","year":"","notes":"Son of Chilview Ann via Kelmscott Bleiot; alternative to the Art mating. Full KR audit still needed.","links":[{"label":"Acker ancestry","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"chilview","short":"FTCh Steadroc Acker of Flintwood"},{"id":"sara","name":"Stokewood Sara","status":"historic","year":"","notes":"Dam of Moorlough Ashlen.","links":[{"label":"Ashlen pedigree","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"chilview","short":"Stokewood Sara"},{"id":"ashlen","name":"Moorlough Ashlen","status":"review","year":"2010","notes":"Acker daughter. Her own complete KR status is not proven.","links":[{"label":"Salander pedigree","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"chilview","short":"Moorlough Ashlen"},{"id":"knots","name":"Knots and Crosses by Quincegrove","status":"kr","year":"","notes":"Sire of Salander; documented KR ancestry through the Beggarbush / Everlasting Spirit route.","links":[{"label":"Salander pedigree","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"chilview","short":"Knots and Crosses by Quincegrove"},{"id":"salander","name":"Moorlough Salander","status":"kr","year":"2014","notes":"Combines Acker/Ashlen with Knots and Crosses; the sire introduces KR. Exclude Salander descendants.","links":[{"label":"Pedigree and progeny","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"chilview","short":"Moorlough Salander"},{"id":"superscud","name":"FTCh Superscud Swank of Stagsden","status":"historic","year":"1993","notes":"Sire of Sundart Solar.","links":[{"label":"Solar pedigree","url":"https://dogs.pedigreeonline.com/sundart-solar-vjAjWH8w/pedigree"}],"group":"america","short":"FTCh Superscud Swank of Stagsden"},{"id":"solar","name":"NAFC/FC/AFC Sundart Solar","status":"review","year":"1997","notes":"Son of Chilview Angel. Important North American trial line; full ancestry not yet verified to be KR-free.","links":[{"label":"Solar pedigree","url":"https://dogs.pedigreeonline.com/sundart-solar-vjAjWH8w/pedigree"}],"group":"america","short":"NAFC/FC/AFC Sundart Solar"},{"id":"lilsis","name":"Shamrock's Lil Sis","status":"historic","year":"","notes":"Dam of Sagemoors Silver Bullitt.","links":[{"label":"Breeding pedigree","url":"https://essft.com/wp-content/uploads/2019/05/Trudel-Pedigree.pdf"}],"group":"america","short":"Shamrock's Lil Sis"},{"id":"bullitt","name":"FC/AFC Sagemoors Silver Bullitt","status":"review","year":"","notes":"Son of Sundart Solar; sire of Hearthrock’s Mayhem.","links":[{"label":"CKC certificate","url":"https://www.ckc.ca/CanadianKennelClub/media/Titles-Awarded/2018/04-APR-18-Titles.pdf?ext=.pdf"}],"group":"america","short":"FC/AFC Sagemoors Silver Bullitt"},{"id":"makers","name":"FC/AFC Hearthrock Makers Mark","status":"historic","year":"","notes":"Dam of Hearthrock’s Mayhem.","links":[{"label":"CKC awards record","url":"https://www.ckc.ca/CanadianKennelClub/media/Titles-Awarded/2018/04-APR-18-Titles.pdf?ext=.pdf"}],"group":"america","short":"FC/AFC Hearthrock Makers Mark"},{"id":"mayhem","name":"FTCh Hearthrock's Mayhem","status":"review","year":"2013","notes":"Canadian 2018 top Open All-Age Spaniel; dam of Gaspereaumtn Minnie BB.","links":[{"label":"CKC official title","url":"https://www.ckc.ca/CanadianKennelClub/media/Titles-Awarded/2018/04-APR-18-Titles.pdf?ext=.pdf"},{"label":"Gaspereau pedigree","url":"https://essft.com/wp-content/uploads/2019/05/Trudel-Pedigree.pdf"}],"group":"america","short":"FTCh Hearthrock's Mayhem"},{"id":"fred","name":"FTCh/AFTCh Narvin's Fred","status":"historic","year":"","notes":"Sire of Gaspereaumtn Minnie BB.","links":[{"label":"Minnie pedigree","url":"https://essft.com/wp-content/uploads/2019/05/Trudel-Pedigree.pdf"}],"group":"america","short":"FTCh/AFTCh Narvin's Fred"},{"id":"minnie","name":"Gaspereaumtn Minnie BB","status":"lead","year":"2019","notes":"Canadian National Amateur Champion in 2025. Modern descendant of Chilview Angel. Not certified KR-free; all collateral ancestors still need inspection.","links":[{"label":"Official stud book","url":"https://members.ckc.ca/docs/default-source/studbooks/2019-stud-book/english/sporting-dogs/spaniel-%28english-springer%29-stud-book-2019.pdf?sfvrsn=6d064913_2"},{"label":"Gaspereau breeding pedigree","url":"https://essft.com/wp-content/uploads/2019/05/Trudel-Pedigree.pdf"}],"group":"america","short":"Gaspereaumtn Minnie BB"},{"id":"sker","name":"FTCh Steadroc Sker","status":"kr","year":"1998","notes":"Son of Ann by Clarburgh Art; a KR-descended line.","links":[{"label":"Pedigree","url":"https://www.champdogs.co.uk/dog/31309"}],"group":"chilview","short":"FTCh Steadroc Sker"},{"id":"gyso","name":"Hannahs Gysophilia Milly","status":"kr","year":"","notes":"Daughter of KR, KR is a confirmed ancestor on the Knots and Crosses route.","links":[{"label":"Pedigree crosscheck","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"kr","short":"Hannahs Gysophilia Milly"},{"id":"beggar","name":"Beggarbush Ash","status":"kr","year":"","notes":"Offspring of Hannahs Gysophilia Milly.","links":[{"label":"Knots ancestry","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"kr","short":"Beggarbush Ash"},{"id":"everlasting","name":"Everlasting Spirit of Quincegrove","status":"kr","year":"","notes":"Offspring of Beggarbush Ash; ancestor of Knots and Crosses.","links":[{"label":"Pedigree","url":"https://www.champdogs.co.uk/dog/72061"}],"group":"kr","short":"Everlasting Spirit of Quincegrove"},{"id":"retes","name":"FTCh Rytex Retes","status":"kr","year":"","notes":"Offspring of Clarburgh Amy; mother of Syncerus Satan.","links":[{"label":"Woodland Lass pedigree","url":"https://www.champdogs.co.uk/dog/67443"}],"group":"kr","short":"FTCh Rytex Retes"},{"id":"syncerus","name":"Syncerus Satan","status":"kr","year":"","notes":"Offspring of Glynvilla Griffin and Rytex Retes: KR introduced via Retes.","links":[{"label":"Woodland Lass pedigree","url":"https://www.champdogs.co.uk/dog/67443"}],"group":"kr","short":"Syncerus Satan"},{"id":"sussex","name":"Sussexoak Woodland Lass","status":"kr","year":"2015","notes":"KR is documented through Rytex Retes and Clarburgh Amy.","links":[{"label":"Full pedigree","url":"https://www.champdogs.co.uk/dog/67443"}],"group":"kr","short":"Sussexoak Woodland Lass"},{"id":"domino","name":"Sussexoak Domino","status":"kr","year":"2018","notes":"Descendant of Sussexoak Woodland Lass; excluded for the no-KR search.","links":[{"label":"Pedigree and litters","url":"https://www.champdogs.co.uk/dog/97116"}],"group":"kr","short":"Sussexoak Domino"}],"edges":[{"from":"ashley","to":"robbson","kind":"parent"},{"from":"macdonna","to":"robbson","kind":"parent"},{"from":"robbson","to":"robbboy","kind":"parent"},{"from":"phantom","to":"robbboy","kind":"parent"},{"from":"robbson","to":"sam","kind":"parent"},{"from":"phantom","to":"sam","kind":"parent"},{"from":"robbboy","to":"bouncer","kind":"parent"},{"from":"lywoodsmut","to":"bouncer","kind":"parent"},{"from":"robbson","to":"susan","kind":"parent"},{"from":"crowhill","to":"susan","kind":"parent"},{"from":"susan","to":"druid","kind":"parent"},{"from":"don","to":"druid","kind":"parent"},{"from":"druid","to":"skipper","kind":"parent"},{"from":"castlings","to":"skipper","kind":"parent"},{"from":"druid","to":"cortman","kind":"parent"},{"from":"bomakama","to":"cortman","kind":"parent"},{"from":"robbson","to":"blackrod","kind":"parent"},{"from":"singrett","to":"blackrod","kind":"parent"},{"from":"blackrod","to":"dandelion","kind":"parent"},{"from":"emmalene","to":"dandelion","kind":"parent"},{"from":"dandelion","to":"mayfly","kind":"parent"},{"from":"tuff","to":"mayfly","kind":"parent"},{"from":"mayfly","to":"minstral","kind":"parent"},{"from":"harrier","to":"minstral","kind":"parent"},{"from":"skipper","to":"griffin","kind":"parent"},{"from":"minstral","to":"griffin","kind":"parent"},{"from":"griffin","to":"kaiser","kind":"ancestry"},{"from":"druid","to":"matchwood","kind":"parent"},{"from":"scilla","to":"matchwood","kind":"parent"},{"from":"matchwood","to":"calendar","kind":"parent"},{"from":"sugarmoon","to":"calendar","kind":"parent"},{"from":"matchwood","to":"dallas","kind":"parent"},{"from":"matchwood","to":"briar","kind":"parent"},{"from":"thistle","to":"briar","kind":"parent"},{"from":"susan","to":"dusty","kind":"parent"},{"from":"rytexrex","to":"dusty","kind":"parent"},{"from":"dusty","to":"gryphon","kind":"parent"},{"from":"masterpiece","to":"gryphon","kind":"parent"},{"from":"gryphon","to":"kr","kind":"parent"},{"from":"bramble","to":"kr","kind":"parent"},{"from":"kr","to":"art","kind":"parent"},{"from":"siskin","to":"art","kind":"parent"},{"from":"kr","to":"amy","kind":"parent"},{"from":"siskin","to":"amy","kind":"parent"},{"from":"kr","to":"millshadow","kind":"parent"},{"from":"art","to":"ringo","kind":"parent"},{"from":"ringo","to":"blue","kind":"parent"},{"from":"art","to":"thistle","kind":"ancestry"},{"from":"finglen","to":"jenoren","kind":"parent"},{"from":"parkmaple","to":"jenoren","kind":"parent"},{"from":"cortman","to":"dans","kind":"parent"},{"from":"dimple","to":"dans","kind":"parent"},{"from":"jenoren","to":"ann","kind":"parent"},{"from":"dans","to":"ann","kind":"parent"},{"from":"jenoren","to":"angel","kind":"parent"},{"from":"dans","to":"angel","kind":"parent"},{"from":"ann","to":"acker","kind":"parent"},{"from":"kelmscott","to":"acker","kind":"parent"},{"from":"acker","to":"ashlen","kind":"parent"},{"from":"sara","to":"ashlen","kind":"parent"},{"from":"ashlen","to":"salander","kind":"parent"},{"from":"knots","to":"salander","kind":"parent"},{"from":"ann","to":"sker","kind":"parent"},{"from":"art","to":"sker","kind":"parent"},{"from":"angel","to":"solar","kind":"parent"},{"from":"superscud","to":"solar","kind":"parent"},{"from":"solar","to":"bullitt","kind":"parent"},{"from":"lilsis","to":"bullitt","kind":"parent"},{"from":"bullitt","to":"mayhem","kind":"parent"},{"from":"makers","to":"mayhem","kind":"parent"},{"from":"mayhem","to":"minnie","kind":"parent"},{"from":"fred","to":"minnie","kind":"parent"},{"from":"kr","to":"gyso","kind":"parent"},{"from":"gyso","to":"beggar","kind":"parent"},{"from":"beggar","to":"everlasting","kind":"parent"},{"from":"everlasting","to":"knots","kind":"parent"},{"from":"amy","to":"retes","kind":"parent"},{"from":"griffin","to":"syncerus","kind":"parent"},{"from":"retes","to":"syncerus","kind":"parent"},{"from":"syncerus","to":"sussex","kind":"parent"},{"from":"sussex","to":"domino","kind":"parent"}],"viewBox":[0.0,0.0,3120.8,1266.8]};</script><script>
+(function(){
+const nodes=DATA.nodes, edges=DATA.edges, byId=Object.fromEntries(nodes.map(n=>[n.id,n]));
+const svg=document.getElementById('treeSvg'), stage=document.getElementById('stage'), nodeGs=[...svg.querySelectorAll('g.node')], edgeGs=[...svg.querySelectorAll('g.edge')];
+const byG=Object.fromEntries(nodeGs.map(g=>[g.querySelector('title')?.textContent?.trim(),g]));
+let selected='robbson', searchText='', mode='all', box=DATA.viewBox.slice(), start=null, pointerMap=new Map();
+const initial=DATA.viewBox.slice();
+function setBox(){svg.setAttribute('viewBox',box.map(x=>+x.toFixed(2)).join(' '));}
+function zoom(f,px=.5,py=.5){let W=box[2],H=box[3],nw=Math.min(initial[2]*1.6,Math.max(240,W*f)),nh=Math.min(initial[3]*1.6,Math.max(140,H*f));box=[box[0]+(W-nw)*px,box[1]+(H-nh)*py,nw,nh];setBox();}
+function fit(){let r=stage.getBoundingClientRect(),ratio=r.width/r.height,iw=initial[2],ih=initial[3],w=iw,h=ih;if(iw/ih>ratio)h=iw/ratio;else w=ih*ratio;box=[(iw-w)/2,(ih-h)/2,w,h];setBox();}
+function focus(id){let g=byG[id];if(!g)return;let b=g.getBBox(),r=stage.getBoundingClientRect(),ratio=r.width/r.height,w=Math.max(410,b.width*3.4),h=w/ratio;if(h<b.height*3.4){h=b.height*3.4;w=h*ratio}box=[b.x+b.width/2-w/2,b.y+b.height/2-h/2,w,h];setBox();}
+function status(st){return {kr:'KR DESCENDANT',lead:'MODERN LEAD',review:'AUDIT NEEDED',foundation:'EARLY LINE',historic:'HISTORICAL'}[st]||st}
+function relatives(id,dir){const seen=new Set([id]),q=[id];while(q.length){const x=q.shift();for(const e of edges){let next=dir==='up'&&e.to===x?e.from:dir==='down'&&e.from===x?e.to:null;if(next&&!seen.has(next)){seen.add(next);q.push(next)}}}return seen}
+function choose(id,move){selected=id;showDetails();update();if(move)focus(id)}
+function showDetails(){const n=byId[selected];if(!n)return;document.getElementById('dogName').textContent=n.name;document.getElementById('dogYear').textContent=n.year?'Recorded birth year: '+n.year:'Pedigree investigation';let b=document.getElementById('dogStatus');b.className='status '+n.status;b.textContent=status(n.status);document.getElementById('dogNotes').textContent=n.notes;const links=document.getElementById('dogLinks');links.textContent='';if(n.links.length){n.links.forEach(l=>{let a=document.createElement('a');a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='↗ '+l.label;links.appendChild(a)})}else{let a=document.createElement('a');a.href='https://www.google.com/search?q='+encodeURIComponent('"'+n.name+'" English Springer pedigree');a.target='_blank';a.rel='noopener noreferrer';a.textContent='↗ Search for pedigree record';links.appendChild(a)}let par=edges.filter(e=>e.to===selected&&e.kind==='parent').map(e=>byId[e.from]?.name),offs=edges.filter(e=>e.from===selected&&e.kind==='parent').map(e=>byId[e.to]?.name);document.getElementById('related').textContent='Shown parents: '+(par.join(' · ')||'Not included')+'\nShown offspring: '+(offs.join(' · ')||'None in this map');}
+function update(){const q=searchText.trim().toLowerCase(),family=mode==='parents'?relatives(selected,'up'):mode==='children'?relatives(selected,'down'):null;let vis=0;nodeGs.forEach(g=>{const id=g.querySelector('title')?.textContent?.trim(),n=byId[id];if(!n)return;const ok= (!q||n.name.toLowerCase().includes(q))&& (mode!=='hidekr'||n.status!=='kr')&& (!family||family.has(id));g.classList.toggle('dim',!ok);g.classList.toggle('selected',id===selected);if(ok)vis++});edgeGs.forEach(g=>{const title=g.querySelector('title')?.textContent||'';let a,b;if(title.includes('->'))[a,b]=title.split('->');let ga=byG[a],gb=byG[b];g.classList.toggle('dim',!ga||!gb||ga.classList.contains('dim')||gb.classList.contains('dim'))});document.getElementById('visibleCount').textContent=vis+' of '+nodes.length+' dogs highlighted';}
+nodeGs.forEach(g=>{const id=g.querySelector('title')?.textContent?.trim();if(byId[id]){g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label','Select '+byId[id].name);g.addEventListener('click',e=>{e.stopPropagation();choose(id,false)});g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose(id,true)}})}});
+document.getElementById('search').addEventListener('input',e=>{searchText=e.target.value;const term=searchText.trim().toLowerCase();if(term.length>=2){let hit=nodes.find(n=>n.name.toLowerCase().includes(term));if(hit){selected=hit.id;showDetails();focus(hit.id)}}else if(!term){fit()}update()});document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter'){let found=nodes.find(n=>n.name.toLowerCase().includes(searchText.toLowerCase()));if(found)choose(found.id,true)}});
+document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{mode=b.dataset.mode;document.querySelectorAll('[data-mode]').forEach(t=>t.classList.toggle('on',t===b));update()}));
+document.querySelectorAll('[data-focus]').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.focus,true)));
+document.getElementById('fit').onclick=fit;document.getElementById('zoomIn').onclick=()=>zoom(.75);document.getElementById('zoomOut').onclick=()=>zoom(1.33);document.getElementById('center').onclick=()=>focus(selected);
+stage.addEventListener('wheel',e=>{e.preventDefault();const r=stage.getBoundingClientRect();zoom(e.deltaY<0?.86:1.15,(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height)},{passive:false});
+stage.addEventListener('pointerdown',e=>{if(e.button!==0&&e.pointerType==='mouse')return;stage.setPointerCapture(e.pointerId);pointerMap.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointerMap.size===1){start={x:e.clientX,y:e.clientY,box:box.slice()};stage.classList.add('dragging')}});
+stage.addEventListener('pointermove',e=>{if(!pointerMap.has(e.pointerId))return;const old=pointerMap.get(e.pointerId);pointerMap.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointerMap.size===1&&start){let r=stage.getBoundingClientRect();box=[start.box[0]-(e.clientX-start.x)*start.box[2]/r.width,start.box[1]-(e.clientY-start.y)*start.box[3]/r.height,start.box[2],start.box[3]];setBox()}else if(pointerMap.size===2){const pts=[...pointerMap.values()];let d=Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y);if(stage._lastPinch)zoom(stage._lastPinch/d);stage._lastPinch=d;start=null}});
+function endPointer(e){pointerMap.delete(e.pointerId);if(pointerMap.size===0){stage.classList.remove('dragging');stage._lastPinch=0;start=null}else if(pointerMap.size===1){let p=[...pointerMap.values()][0];start={x:p.x,y:p.y,box:box.slice()}}}
+stage.addEventListener('pointerup',endPointer);stage.addEventListener('pointercancel',endPointer);stage.addEventListener('dblclick',e=>{e.preventDefault();const r=stage.getBoundingClientRect();zoom(.6,(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height)});
+window.addEventListener('resize',()=>{});showDetails();fit();update();
+})();
+</script></body></html>
