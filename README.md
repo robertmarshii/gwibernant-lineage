@@ -10,8 +10,13 @@ Interactive research map of working English Springer Spaniel pedigrees, beginnin
 - Identify branches linked to Kenine Robb of Rytex (KR).
 - Distinguish confirmed KR descendants from branches still under investigation.
 
+## Competition research (2006–2026)
+- Explore 14 documented high-performing competitors across Britain, North America and other trial circuits, and their known relatives in the main family tree.
+- View wins, national titles, or field-trial points, with source links. These measures are **not interchangeable** and do not form a comprehensive worldwide all-time ranking.
+- KR alerts show a traceable ancestral path where verified; unknown or incomplete pedigrees remain explicitly unresolved.
+
 ## Status and limitations
-This is an *investigative lineage map*, not an authoritative or comprehensive Kennel Club pedigree. Some relationships remain provisional or unverified; colour coding must not be interpreted as proof that a dog is KR-free. A KR-free breeding recommendation requires both parents' complete pedigrees.
+This is an *investigative lineage map*, not an authoritative or comprehensive Kennel Club pedigree. Current research includes 183 named dogs, 10 recorded matings/litters, and 207 pedigree links. Some relationships remain provisional or unverified; colour coding must not be interpreted as proof that a dog is KR-free. A KR-free breeding recommendation requires both parents' complete pedigrees.
 
 ## Publishing with GitHub Pages
 1. Make the GitHub repository **Public** if you want to share its source openly.
