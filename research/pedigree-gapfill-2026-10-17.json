@@ -1,6 +1,6 @@
 {
   "version": "2026-10-17",
-  "description": "Source-backed parentage additions to the original Gwibernant/Robb, Rothievale, Chilview, Sussexoak, Scotts and Woodland existing families; these are parent-child edges, not certification of complete pedigrees.",
+  "description": "Source-backed parentage additions to the original Gwibernant/Robb, Rothievale, Chilview, Sussexoak, Scotts and Woodland existing families; these are parent-child edges, not certification of complete pedigrees. Corrected Hellfire's Fast Track parentage to Abitt of Hellfire from Woodland's pedigree; the Rancho Mistletoe pedigree on Woodland's page is used to correct a previously mislinked dam.",
   "sources": {
     "origins": "https://www.pedigreedatabase.com/english_springer_spaniel/dog.html?id=1912515-badgercourt-susan%3F_v%3D20200605101938",
     "druid": "https://www.pedigreedatabase.com/english_springer_spaniel/dog.html?id=2375940-badgercourt-druid%3F_v%3D20200605112057",
@@ -677,7 +677,7 @@
       "child": "FC/AFC Hellfire's Fast Track",
       "parents": [
         "FC/AFC Rolling Oaks High Chaparral",
-        "Rolick Rambolin Rosie"
+        "Abitt of Hellfire"
       ],
       "source": "https://www.woodlandkennel.com/remi-pedigree/",
       "branch": "North American Matchwood"
